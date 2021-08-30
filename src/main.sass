@@ -1,0 +1,43 @@
+// intialiazing section 
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Varta', sans-serif
+::-webkit-scrollbar
+        display: none
+body
+    background-color: rgb(17, 17, 17)
+    background-size: cover
+    background-attachment: fixed
+    height: 100vh
+    color: rgb(255, 255, 255)
+    overflow-x: hidden
+    &::after
+        content: ""
+        opacity: 0.5 !important
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1      
+// global classes
+.hide-D
+    display: none
+.App
+    position: relative
+    width: 100%
+.cont
+    position: relative
+    width: 100%
+.flex
+    position: relative
+    display: flex    
+
+
+
+@import Home/Home.sass
+@import MouseAnimation/MouseAnimation.sass
+@import ThemeMenu/themeMenu.sass
+@import Menu/menu.sass

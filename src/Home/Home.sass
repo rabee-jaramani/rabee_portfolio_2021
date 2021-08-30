@@ -1,0 +1,78 @@
+
+
+
+.home-cont
+    .hello
+        position: fixed
+        left: 0
+        height: 100vh
+    .front-developer
+        position: relative
+        width: 100%
+        text-align: center
+    #front
+        position: relative
+        font-size: 5rem
+        font-weight: 800
+    .line
+        position: relative
+        border-top: solid rgb(153, 153, 153) 2px
+        width: 20%
+        margin-top: -20px
+        margin-left: 50%
+        transform: translate(-50%)
+    .my-name
+        position: relative
+        font-size: 4rem
+        width: 100%
+        text-align: center
+        margin-top: 20px
+    .img_ext
+        width: 40px
+        margin-bottom: 10px
+        animation: infinite_rotate 2s infinite
+
+    .my-img-cont
+        position: relative
+        width: 300px
+        margin-left: 50%
+        transform: translate(-50%)
+        img
+            width: 100%
+    .about-me
+        position: relative
+        font-size: 1.4rem
+        width: 40%
+        border-radius: 0 50px 0 50px
+        text-align: center
+        margin-left: 50%
+        transform: translate(-50%)
+
+@keyframes infinite_rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+    
+
+@media (max-width:1150px)
+    .home-cont
+        .hello
+            width: 10vw
+        .front-developer
+            padding-top: 100px
+        #front
+            font-size: 1.8rem 
+        .my-name
+            font-size: 1.3rem 
+        .img_ext
+            width: 20px 
+        .my-img-cont
+            width: 200px
+        .about-me
+            font-size: 0.8rem
+            width: 75%
+            border-radius: 0 20px 0 20px
+
+        .line
+            margin-top: 0px

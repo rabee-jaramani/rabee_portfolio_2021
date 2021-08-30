@@ -1,0 +1,32 @@
+//WAFE Menu 
+.theme-menu-flex
+    position: fixed
+    right: 0
+    bottom: 0
+    // transform: translateY(-50%)
+    justify-content: space-between
+    background-color: rgba(1, 1, 1, 0.281)
+    border-radius: 25px 0 0 0
+    width: 65px
+    .flex-item
+        text-align: center
+        cursor: pointer
+        &:hover
+            filter: brightness(1.2)
+    img
+        width: 50%
+    .winter
+        color: #a4dbff
+    .summer
+        color: #ffd942
+    .spring
+        color: #ffb4c8
+    .autumn
+        color: #df8860
+    .themes
+        margin-bottom: 15px
+
+@media (max-width:1150px)
+    .theme-menu-flex
+            width: 40px
+            font-size: 0.7rem

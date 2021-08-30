@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { CSSPlugin } from "gsap/all";
+import gsap from "gsap/gsap-core";
+import { useEffect } from "react";
+import Home from "./Home/Home";
+import Menu from "./Menu/Menu";
+import ThemeMenu from "./ThemeMenu/ThemeMenu";
+import MouseAnimation from "./MouseAnimation/MouseAnimation";
 
 function App() {
+  useEffect(() => {
+    gsap.registerPlugin( CSSPlugin )
+   
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home/>
+      <ThemeMenu/>
+      <Menu/>
+      <MouseAnimation/>
     </div>
   );
 }

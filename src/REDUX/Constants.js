@@ -1,0 +1,2 @@
+
+export const SET_SEASON_IMG='SET_SEASON_IMG';
