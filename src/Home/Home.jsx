@@ -4,7 +4,7 @@ import me from '../images/rabee2.png'
 
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';
-
+import MouseAnimation from "../MouseAnimation/MouseAnimation";
 
 const Home = () => {
     const TL=new Timeline()
@@ -57,6 +57,8 @@ const Home = () => {
                 will shape our lives in ways that we have only been able 
                 to dream about.
                 </div>
+          <MouseAnimation/>
+
         </div>
     );
 }
