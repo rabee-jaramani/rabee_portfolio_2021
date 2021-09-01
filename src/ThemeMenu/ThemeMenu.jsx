@@ -101,7 +101,7 @@ const ThemeMenu = () => {
         if(season_name==='winter'){
             TL.to('#front',{color:'white'})
             .to('#my-name',{color:'white'})
-            .to('#about-me',{textShadow:'2px 2px rgb(2,57,114)'})
+            .to('#about-me',{color:'white',textShadow:'2px 2px rgb(2,57,114)'})
             .to('#item1',{backgroundColor:'rgb(100,160,210)'})        
             .to('#item2',{backgroundColor:'rgb(80,140,190)'})        
             .to('#item3',{backgroundColor:'rgb(60,120,170)'})        
