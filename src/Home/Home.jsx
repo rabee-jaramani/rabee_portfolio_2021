@@ -10,19 +10,19 @@ const Home = () => {
     const TL=new Timeline()
     const season_img= useSelector(state=>state.Season.season_img)
     const duration=0.4
+    var delay=1
     
     useEffect(() => {
-    TL.to('.home-cont',{display:'block'})
-    .from('#front',{top:'-1000px',duration:duration,delay:1})
-    .from('.line',{left: '-1500px',duration:duration})
-    .from('.my-name',{top:'-1000px',duration:duration})
-    .from('.my-img-cont',{top:'-1000px',duration:duration})
-    .from('.about-me',{opacity:0,duration:duration})
-    
-    .from('#hello',{left: -500,duration:duration})
-    .from('.menu-flex',{top:'-1000px',duration:duration})
-    .from('.theme-menu-flex',{bottom:'-1000px',duration:duration})
-
+        TL.to('.home-cont',{display:'block',delay:delay})
+        .from('#front',{top:'-1000px',duration:duration})
+        .from('.line',{left: '-1500px',duration:duration})
+        .from('.my-name',{top:'-1000px',duration:duration})
+        .from('.my-img-cont',{top:'-1000px',duration:duration})
+        .from('.about-me',{opacity:0,duration:duration})
+        
+        .from('#hello',{left: -500,duration:duration})
+        .from('.menu-flex',{top:'-1000px',duration:duration})
+        .from('.theme-menu-flex',{bottom:'-1000px',duration:duration})
 
     }, );
 

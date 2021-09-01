@@ -21,6 +21,7 @@ import winter_bg from '../images/backgrounds/winter.jpg'
 import summer_bg from '../images/backgrounds/summer.jpg'
 import spring_bg from '../images/backgrounds/spring.jpg'
 import autumn_bg from '../images/backgrounds/autumn.jpg'
+import bw_bg from '../images/backgrounds/bw.png'
 
 import summer_ext from '../images/ext/summer_ext.png'
 import winter_ext from '../images/ext/winter_ext.png'
@@ -148,7 +149,7 @@ const ThemeMenu = () => {
             TL.to('#front',{color:'rgb(251,251,251)'})
                 .to('#my-name',{color:'rgb(251,251,251)'})
                 .to('#about-me',{color:'rgb(251,251,251)'})
-                .to('#body',{backgroundImage:`none`})
+                // .to('#body',{backgroundImage:`none`})
                 .to('#body',{backgroundColor:`rgb(1,1,1)`})
                 .to('#hello',{attr:{src:hello_winter}})
                 .to('#item1',{backgroundColor:'rgb(71, 71, 71)'})        
@@ -196,7 +197,7 @@ const ThemeMenu = () => {
                     <div className='title'>Autumn</div>
                 </div>
 
-                <div className='blackwhite flex-item' onClick={()=>handleTheme('bw',bw_ext,null,null)}>
+                <div className='blackwhite flex-item' onClick={()=>handleTheme('bw',bw_ext,bw_bg,null)}>
                     <img src={bw} alt='bw'/>
                     <div className='title'>BW</div>
                 </div>
