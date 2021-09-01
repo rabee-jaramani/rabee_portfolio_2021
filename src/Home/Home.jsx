@@ -12,7 +12,8 @@ const Home = () => {
     const duration=0.4
     
     useEffect(() => {
-    TL.from('#front',{top:'-1000px',duration:duration,delay:1})
+    TL.to('.home-cont',{display:'block'})
+    .from('#front',{top:'-1000px',duration:duration,delay:1})
     .from('.line',{left: '-1500px',duration:duration})
     .from('.my-name',{top:'-1000px',duration:duration})
     .from('.my-img-cont',{top:'-1000px',duration:duration})
@@ -27,7 +28,6 @@ const Home = () => {
 
     return (
         <div className='home-cont cont'>
-
             <img id='hello' src={hello} className='hello' alt='hellow world'/>
 
             <div className='front-developer' >

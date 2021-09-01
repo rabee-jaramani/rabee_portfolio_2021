@@ -26,6 +26,7 @@ import summer_ext from '../images/ext/summer_ext.png'
 import winter_ext from '../images/ext/winter_ext.png'
 import spring_ext from '../images/ext/spring_ext.png'
 import autumn_ext from '../images/ext/autumn_ext.png'
+import bw_ext from '../images/ext/star.png'
 import { Timeline } from 'gsap/gsap-core';
 
 
@@ -143,7 +144,7 @@ const ThemeMenu = () => {
             .to('#item6',{backgroundColor:'rgb(190,110,100)'})        
         }
         if(season_name==='bw'){
-            dispatch(setSeasonExtAction({season_name:'',season_img:null}))
+            dispatch(setSeasonExtAction({season_name:'bw',season_img:season_img}))
             TL.to('#front',{color:'rgb(251,251,251)'})
                 .to('#my-name',{color:'rgb(251,251,251)'})
                 .to('#about-me',{color:'rgb(251,251,251)'})
@@ -195,7 +196,7 @@ const ThemeMenu = () => {
                     <div className='title'>Autumn</div>
                 </div>
 
-                <div className='blackwhite flex-item' onClick={()=>handleTheme('bw',null,null,null)}>
+                <div className='blackwhite flex-item' onClick={()=>handleTheme('bw',bw_ext,null,null)}>
                     <img src={bw} alt='bw'/>
                     <div className='title'>BW</div>
                 </div>

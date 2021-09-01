@@ -2,6 +2,7 @@
 
 
 .home-cont
+    display: none
     .hello
         position: fixed
         left: 0
@@ -30,7 +31,7 @@
     .img_ext
         width: 40px
         margin-bottom: 10px
-        animation: infinite_rotate 2s infinite
+        animation: infinite_rotate 2s infinite linear
 
     .my-img-cont
         position: relative
@@ -52,9 +53,26 @@
     0%
         transform: rotate(0deg)
     100%
-        transform: rotate(360deg)
-    
+        transform: rotate(359deg)
 
+.load-cont
+    position: relative
+    width: 50px
+    height: 50px
+    background-color: green
+.c
+    width: 50px
+    height: 50px
+    border: 2px blue solid
+    border-radius: 50%
+    transform: rotateX(60deg)
+    animation: infinite_rotate 1s infinite linear
+
+.inner-c
+    height: 5px
+    width: 5px
+    border: 5px solid white
+    border-radius: 50%
 @media (max-width:1150px)
     .home-cont
         .hello
