@@ -1,29 +1,29 @@
 import React, { useEffect }  from 'react';
 import hello from '../images/hello.png'
 import me from '../images/rabee2.png'
-import $ from 'jquery'
+// import $ from 'jquery'
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';
-import { Power1, TweenLite } from 'gsap/all';
+// import { Power1, TweenLite } from 'gsap/all';
 
 const Home = () => {
     const TL=new Timeline()
     const season_img= useSelector(state=>state.Season.season_img)
     const duration=0.4
     var delay=1
-    $(document).mousemove(function(event){
-        var xPos = (event.clientX/$(window).width())-0.5,
-            yPos = (event.clientY/$(window).height())-0.5,
-            box = $('.home-cont');
+    // $(document).mousemove(function(event){
+    //     var xPos = (event.clientX/$(window).width())-0.5,
+    //         yPos = (event.clientY/$(window).height())-0.5,
+    //         box = $('.home-cont');
        
-       TweenLite.to(box, 0.6, {
-         rotationY: 5 * xPos, 
-         rotationX: 5 * yPos,
-         ease: Power1.easeOut,
-         transformPerspective: 900,
-         transformOrigin: 'center'
-       });
-     });
+    //    TweenLite.to(box, 0.6, {
+    //      rotationY: 5 * xPos, 
+    //      rotationX: 5 * yPos,
+    //      ease: Power1.easeOut,
+    //      transformPerspective: 900,
+    //      transformOrigin: 'center'
+    //    });
+    //  });
     useEffect(() => {
         TL.to('.home-cont',{display:'block',delay:delay})
         .from('#front',{top:'-1000px',duration:duration})
