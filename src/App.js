@@ -6,7 +6,7 @@ import Home from "./Home/Home";
 import Menu from "./Menu/Menu";
 import ThemeMenu from "./ThemeMenu/ThemeMenu";
 // import MouseAnimation from "./MouseAnimation/MouseAnimation";
-import Projects from "./Projects/Projects";
+import Projects from "./Projects/Projects.jsx";
 import MouseAnimation from "./MouseAnimation/MouseAnimation";
 import Cv from "./CV/Cv";
 
