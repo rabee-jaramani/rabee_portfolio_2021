@@ -14,7 +14,10 @@ const Menu = () => {
             <div className='menu-item item3' id='item3'>Contact</div>
             <div className='menu-item item4' id='item4'>Redux</div>
             <div className='menu-item item5' id='item5'>Api</div>
+            <Link to='/cv'>
             <div className='menu-item item6' id='item6'>My CV</div>
+            </Link>
+
         </div>
     );
 }

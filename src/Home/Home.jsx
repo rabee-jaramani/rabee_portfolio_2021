@@ -1,17 +1,29 @@
 import React, { useEffect }  from 'react';
 import hello from '../images/hello.png'
 import me from '../images/rabee2.png'
-
+import $ from 'jquery'
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';
-import MouseAnimation from "../MouseAnimation/MouseAnimation";
+import { Power1, TweenLite } from 'gsap/all';
 
 const Home = () => {
     const TL=new Timeline()
     const season_img= useSelector(state=>state.Season.season_img)
     const duration=0.4
     var delay=1
-    
+    $(document).mousemove(function(event){
+        var xPos = (event.clientX/$(window).width())-0.5,
+            yPos = (event.clientY/$(window).height())-0.5,
+            box = $('.home-cont');
+       
+       TweenLite.to(box, 0.6, {
+         rotationY: 5 * xPos, 
+         rotationX: 5 * yPos,
+         ease: Power1.easeOut,
+         transformPerspective: 900,
+         transformOrigin: 'center'
+       });
+     });
     useEffect(() => {
         TL.to('.home-cont',{display:'block',delay:delay})
         .from('#front',{top:'-1000px',duration:duration})
@@ -43,7 +55,7 @@ const Home = () => {
             </h2>
             {/* <div className='aboutMeAndImg_flex'> */}
                 <div className='my-img-cont'>
-                    <img src={me} alt='rabee'/>
+                    <img id='me' src={me} alt='rabee'/>
                 </div>
                 <div className='about-me' id='about-me'>
                 I come from an Informatics Engineering background and have 
@@ -57,7 +69,7 @@ const Home = () => {
                 will shape our lives in ways that we have only been able 
                 to dream about.
                 </div>
-          <MouseAnimation/>
+          {/* <MouseAnimation/> */}
 
         </div>
     );

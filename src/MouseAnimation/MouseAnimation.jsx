@@ -14,7 +14,7 @@ const MouseAnimation = () => {
                 scale:0.8,
                 skewX:-10,
                 x:e.clientX,
-                y:e.clientY-750,
+                y:e.clientY,
                 stagger:0.1,
                 display:'block'
             })

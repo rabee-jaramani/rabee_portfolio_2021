@@ -1,9 +1,18 @@
 import React from 'react';
-
+import Card from './Card.jsx';
+import {projectsList} from './projects.js'
 const Projects = () => {
     return (
         <div className='projects-cont'>
-            Projects
+            <h1 className='projects-title'>Recent Projects</h1>
+                <div className='projects'>
+                {projectsList.map(e=>{
+                    return <Card proj_name={e.proj_name}
+                            proj_img={e.proj_img}
+                            proj_tools={e.proj_tools}
+                            proj_link={e.proj_link}/>
+                })}
+                </div>
         </div>
     );
 }
