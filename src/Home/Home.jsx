@@ -1,6 +1,6 @@
 import React, { useEffect }  from 'react';
-import hello from '../images/hello.png'
-import me from '../images/rabee2.png'
+import hello from '../images/hello.webp'
+import me from '../images/rabee2.webp'
 // import $ from 'jquery'
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';

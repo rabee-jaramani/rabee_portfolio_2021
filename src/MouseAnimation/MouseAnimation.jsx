@@ -1,7 +1,7 @@
 import gsap from 'gsap/gsap-core';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import star from '../images/ext/star.png'
+import star from '../images/ext/star.webp'
 const MouseAnimation = () => {
    const {season_name,season_img} = useSelector(state=>state.Season)
     useEffect(() => {

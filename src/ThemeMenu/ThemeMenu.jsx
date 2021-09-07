@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 // import $ from 'jquery'
 
-import hello_winter from '../images/hello.png'
-import hello_summer from '../images/hello_summer.png'
-import hello_spring from '../images/hello_spring.png'
-import hello_autumn from '../images/hello_autumn.png'
+import hello_winter from '../images/hello.webp'
+import hello_summer from '../images/hello_summer.webp'
+import hello_spring from '../images/hello_spring.webp'
+import hello_autumn from '../images/hello_autumn.webp'
 
 
 import { useDispatch } from 'react-redux';
 import { setSeasonExtAction } from '../REDUX';
 import gsap from 'gsap/gsap-core';
 
-import summer from '../images/menu_icons/summer.png'
-import winter from '../images/menu_icons/winter.png'
-import spring from '../images/menu_icons/spring.png'
-import autumn from '../images/menu_icons/autumn.png'
-import bw from '../images/menu_icons/blackwhite.png'
-import themes from '../images/menu_icons/themes.png'
+import summer from '../images/menu_icons/summer.webp'
+import winter from '../images/menu_icons/winter.webp'
+import spring from '../images/menu_icons/spring.webp'
+import autumn from '../images/menu_icons/autumn.webp'
+import bw from '../images/menu_icons/blackwhite.webp'
+import themes from '../images/menu_icons/themes.webp'
 import winter_bg from '../images/backgrounds/winter.webp'
 import summer_bg from '../images/backgrounds/summer.webp'
 import spring_bg from '../images/backgrounds/spring.webp'
 import autumn_bg from '../images/backgrounds/autumn.webp'
-import bw_bg from '../images/backgrounds/bw.png'
+import bw_bg from '../images/backgrounds/bw.webp'
 
-import summer_ext from '../images/ext/summer_ext.png'
-import winter_ext from '../images/ext/winter_ext.png'
-import spring_ext from '../images/ext/spring_ext.png'
-import autumn_ext from '../images/ext/autumn_ext.png'
-import bw_ext from '../images/ext/star.png'
+import summer_ext from '../images/ext/summer_ext.webp'
+import winter_ext from '../images/ext/winter_ext.webp'
+import spring_ext from '../images/ext/spring_ext.webp'
+import autumn_ext from '../images/ext/autumn_ext.webp'
+import bw_ext from '../images/ext/star.webp'
 import { Timeline } from 'gsap/gsap-core';
 
 
@@ -156,6 +156,7 @@ const ThemeMenu = () => {
                 // .to('#body',{backgroundImage:`none`})
                 .to('#body',{backgroundColor:`rgb(1,1,1)`})
                 .to('#hello',{attr:{src:hello_winter}})
+                .to('#item0',{backgroundColor:'rgb(40, 40, 40)'})        
                 .to('#item1',{backgroundColor:'rgb(50, 50, 50)'})        
                 .to('#item1',{backgroundColor:'rgb(71, 71, 71)'})        
                 .to('#item2',{backgroundColor:'rgb(90, 90, 90)'})        

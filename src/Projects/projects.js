@@ -1,11 +1,11 @@
-import beruit_lounge from './images/beruit.jpg'
-import christina from './images/christina.jpg'
-import construction from './images/construction.jpg'
-import fast_tech from './images/fast_tech.jpg'
-import estar from './images/estar.jpg'
-import jad from './images/jad.jpg'
-import mazyad from './images/mazyad.jpg'
-import rose_shop from './images/rose_shop.jpg'
+import beruit_lounge from './images/beruit.webp'
+import christina from './images/christina.webp'
+import construction from './images/construction.webp'
+import fast_tech from './images/fast_tech.webp'
+import estar from './images/estar.webp'
+import jad from './images/jad.webp'
+import mazyad from './images/mazyad.webp'
+import rose_shop from './images/rose_shop.webp'
 
 
 export  const projectsList=[
