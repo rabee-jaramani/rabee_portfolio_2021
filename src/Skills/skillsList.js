@@ -14,6 +14,7 @@ import sql from './images/sql.webp'
 import jira from './images/jira.webp'
 import agile from './images/agile.webp'
 import photo from './images/photo.webp'
+import csharp from './images/csharp.webp'
 
 
 const good='rgb(80, 255, 104)'
@@ -140,4 +141,13 @@ export const skillsList=[
         percent:55
 
     },
+    
+    {
+        id: 17,
+        skill_img:csharp,
+        skill_name:'C#',
+        color:start,
+        percent:50
+
+    }
 ]
