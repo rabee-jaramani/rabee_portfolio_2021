@@ -11,12 +11,15 @@ import jquery from './images/jquery.png'
 import rest from './images/rest.png'
 import mongo from './images/mongo.png'
 import sql from './images/sql.png'
+import jira from './images/jira.png'
+import agile from './images/agile.png'
+import photo from './images/photo.png'
 
 
 const good='rgb(80, 255, 104)'
 const ok='#d8ff00'
 const half='#ffa200'
-// const starter='#ff3c00'
+const start='#ff3c00'
 export const skillsList=[
     {
         id: 1,
@@ -62,7 +65,7 @@ export const skillsList=[
 
     },
     {
-        id: 11,
+        id: 7,
         skill_img:rest,
         skill_name:'RESTful API',
         color:good,
@@ -70,28 +73,28 @@ export const skillsList=[
 
     },
     {
-        id: 7,
+        id: 8,
         skill_img:gsap_img,
         skill_name:'GSAP',
         color:ok,
         percent:72
 
     },   {
-        id: 8,
+        id: 9,
         skill_img:node,
         skill_name:'Node-js',
         color:ok,
         percent:70
 
     },  {
-        id: 9,
+        id: 10,
         skill_img:github,
         skill_name:'GitHub',
         color:ok,
         percent:70
 
     },{
-        id: 10,
+        id: 11,
         skill_img:jquery,
         skill_name:'JQuery',
         color:ok,
@@ -99,7 +102,7 @@ export const skillsList=[
 
     },
     {
-        id: 11,
+        id: 12,
         skill_img:mongo,
         skill_name:'MongoDB',
         color:half,
@@ -107,11 +110,34 @@ export const skillsList=[
 
     },
     {
-        id: 12,
+        id: 13,
         skill_img:sql,
         skill_name:'SQL',
         color:half,
         percent:60
+
+    },
+    {
+        id: 14,
+        skill_img:jira,
+        skill_name:'Jira',
+        color:start,
+        percent:45
+
+    },{
+        id: 15,
+        skill_img:agile,
+        skill_name:'Agile',
+        color:start,
+        percent:46
+
+    },
+    {
+        id: 16,
+        skill_img:photo,
+        skill_name:'PhotoShop',
+        color:ok,
+        percent:55
 
     },
 ]

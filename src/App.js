@@ -14,6 +14,7 @@ import Skills from "./Skills/Skills";
 function App() {
   useEffect(() => {
     gsap.registerPlugin( CSSPlugin )
+
    
   }, []);
   return (
