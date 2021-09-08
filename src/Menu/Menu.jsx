@@ -14,7 +14,7 @@ const Menu = () => {
             </Link>
             
             <Link to='/skills'>
-            <div className='menu-item item2' id='item2'>Skilss</div>
+            <div className='menu-item item2' id='item2'>Skills</div>
             </Link>
             <div className='menu-item item3' id='item3'>Contact</div>
             <div className='menu-item item4' id='item4'>Redux</div>
