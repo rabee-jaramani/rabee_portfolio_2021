@@ -4,7 +4,7 @@ import me from '../images/rabee2.webp'
 // import $ from 'jquery'
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';
-// import { Power1, TweenLite } from 'gsap/all';
+// import gsap, { Power1, TweenLite } from 'gsap/all';
 
 const Home = () => {
     const TL=new Timeline()
@@ -16,7 +16,7 @@ const Home = () => {
     //         yPos = (event.clientY/$(window).height())-0.5,
     //         box = $('.home-cont');
        
-    //    TweenLite.to(box, 0.6, {
+    //    gsap.to(box, 0.6, {
     //      rotationY: 5 * xPos, 
     //      rotationX: 5 * yPos,
     //      ease: Power1.easeOut,

@@ -30,19 +30,6 @@ import autumn_ext from '../images/ext/autumn_ext.webp'
 import bw_ext from '../images/ext/star.webp'
 import { Timeline } from 'gsap/gsap-core';
 
-
-// const changeTheme=(season)=>{
-//     var t1=gsap.timeline()
-// t1.to('#body',{
-//     backgroundImage:`url(${snow})`,
-//     backgroundSize:'cover',
-//     backgroundAttachment:'fixed',
-// })
-// .from('.theme-menu-flex',{
-//    marginLeft:-1000 
-// })
-// }
-
 const ThemeMenu = () => {
 
     const dispatch = useDispatch()
@@ -175,37 +162,37 @@ const ThemeMenu = () => {
             
                 <div className='themes flex-item' onClick={()=>{closeThemeMenu()}}>
                     <img src={themes} alt='themes'/>
-                    <div className='title'>Themes</div>
+                    <div className='theme-title'>Themes</div>
                 </div> 
 
 
                 <div className='winter flex-item' 
                 onClick={()=>handleTheme('winter',winter_ext,winter_bg,hello_winter)}>
                     <img src={winter} alt='winter'/>
-                    <div className='title'>Winter</div>
+                    <div className='theme-title'>Winter</div>
                 </div>
 
                 <div className='spring flex-item' 
                 onClick={()=>handleTheme('spring',spring_ext,spring_bg,hello_spring)}>
                     <img src={spring} alt='spring'/>
-                    <div className='title'>Spring</div>
+                    <div className='theme-title'>Spring</div>
                 </div>
 
                 <div className='summer flex-item' 
                 onClick={()=>handleTheme('summer',summer_ext,summer_bg,hello_summer)}>
                     <img src={summer} alt='summer'/>
-                    <div className='title'>Summer</div>
+                    <div className='theme-title'>Summer</div>
                 </div>
 
                 <div className='autumn flex-item' 
                 onClick={()=>handleTheme('autumn',autumn_ext,autumn_bg,hello_autumn)}>
                     <img src={autumn} alt='land'/>
-                    <div className='title'>Autumn</div>
+                    <div className='theme-title'>Autumn</div>
                 </div>
 
                 <div className='blackwhite flex-item' onClick={()=>handleTheme('bw',bw_ext,bw_bg,null)}>
                     <img src={bw} alt='bw'/>
-                    <div className='title'>BW</div>
+                    <div className='theme-title'>BW</div>
                 </div>
             </div>
     );

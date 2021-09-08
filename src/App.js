@@ -9,6 +9,7 @@ import ThemeMenu from "./ThemeMenu/ThemeMenu";
 import Projects from "./Projects/Projects.jsx";
 import MouseAnimation from "./MouseAnimation/MouseAnimation";
 import Cv from "./CV/Cv";
+import Skills from "./Skills/Skills";
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
               <Route path='/' exact component={Home}/>
               <Route path='/projects' component={Projects}/>
               <Route path='/cv' component={Cv}/>
+              <Route path='/skills' component={Skills}/>
 
           </Switch>
           <ThemeMenu/>

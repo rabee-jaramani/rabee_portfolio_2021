@@ -1,0 +1,17 @@
+
+.projects
+    position: relative
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr))
+    grid-gap: 1.5rem
+    align-items: flex-start
+    text-align: center
+    width: 90%
+    margin-left: 50%
+    transform: translate(-50%)
+
+@media ( max-width: 1150px )
+    .projects
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        grid-gap: 1rem
+    

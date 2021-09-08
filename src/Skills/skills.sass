@@ -1,0 +1,42 @@
+.skills-cont
+    position: relative
+    width: 95%
+    margin-left: 50%
+    transform: translate(-50%)
+    .skills-grid
+        display: grid
+        width: 100%
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+        gap: 20px
+        .grid-item
+            // width: 260px
+            // height: 260px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-self: center
+            border-radius: 50%
+            transition: 0.5s
+            &:hover
+            img
+                width: 160px
+                height: 160px
+            .skill-name
+                // width: 100%
+                // text-align: center
+            #bar
+                height: 20px !important
+                width: 50px !important
+@media ( max-width: 750px )
+    .skills-cont
+        .skills-grid
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+            .grid-item
+                img
+                    width: 60px
+                    height: 60px
+                h2
+                    font-size: 1rem
+                div
+                    height: 5px !important
+    

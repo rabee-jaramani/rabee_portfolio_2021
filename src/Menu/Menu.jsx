@@ -13,7 +13,9 @@ const Menu = () => {
                 <div className='menu-item item1' id='item1'>Projects</div>
             </Link>
             
+            <Link to='/skills'>
             <div className='menu-item item2' id='item2'>Skilss</div>
+            </Link>
             <div className='menu-item item3' id='item3'>Contact</div>
             <div className='menu-item item4' id='item4'>Redux</div>
             <div className='menu-item item5' id='item5'>Api</div>

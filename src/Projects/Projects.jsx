@@ -4,7 +4,7 @@ import {projectsList} from './projects.js'
 const Projects = () => {
     return (
         <div className='projects-cont'>
-            <h1 className='projects-title'>Recent Projects</h1>
+            <h1 className='title'>Recent Projects</h1>
                 <div className='projects'>
                 {projectsList.map(e=>{
                     return <Card key={e.id}
