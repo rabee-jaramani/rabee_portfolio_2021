@@ -9,7 +9,7 @@ const MouseAnimation = () => {
         var width=window.innerWidth
         root.addEventListener('mousemove',e=>{
             // console.log(e.clientY)
-            if(width>1800){
+            if(width>=1800){
             gsap.to('.mouse-pointer',{
                 scale:0.8,
                 skewX:-10,
@@ -19,7 +19,7 @@ const MouseAnimation = () => {
                 display:'block'
             })
         }
-        if(width>1600 && width<1800){
+        if(width>=1600 && width<1800){
             gsap.to('.mouse-pointer',{
                 scale:0.8,
                 skewX:-10,
@@ -29,7 +29,7 @@ const MouseAnimation = () => {
                 display:'block'
             })
         }
-        if(width>1400 && width<1600){
+        if(width>=1400 && width<1600){
             gsap.to('.mouse-pointer',{
                 scale:0.8,
                 skewX:-10,
@@ -39,7 +39,7 @@ const MouseAnimation = () => {
                 display:'block'
             })
         }
-        if(width>1150 && width<1400){
+        if(width>=1150 && width<1400){
             gsap.to('.mouse-pointer',{
                 scale:0.8,
                 skewX:-10,
@@ -49,7 +49,7 @@ const MouseAnimation = () => {
                 display:'block'
             })
         }
-        if(width>800 && width<1150){
+        if(width>=800 && width<1150){
             gsap.to('.mouse-pointer',{
                 scale:0.8,
                 skewX:-10,
