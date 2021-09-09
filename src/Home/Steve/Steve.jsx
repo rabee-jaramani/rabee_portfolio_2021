@@ -5,7 +5,7 @@ const Steve = () => {
     return (
         <div className='steve-cont'>
             
-            <TypeIt
+            <TypeIt id='steve-cont'
             options={{
                 speed: 30,
                 startDelay: 3500,

@@ -105,7 +105,7 @@ const ThemeMenu = () => {
         if(season_name==='winter'){
             TL.to('#front',{color:'white'})
             .to('#my-name',{color:'white'})
-            .to('#about-me',{color:'white',textShadow:'2px 2px rgb(2,57,114)'})
+            .to('#steve-cont',{backgroundColor:'rgb(2,41,78,0.5)'})
             .to('#item0',{backgroundColor:'rgb(110,170,220)'})     
             .to('#item1',{backgroundColor:'rgb(100,160,210)'})     
             .to('#item2',{backgroundColor:'rgb(80,140,190)'})        
@@ -118,7 +118,7 @@ const ThemeMenu = () => {
         if(season_name==='spring'){
             TL.to('#front',{color:'rgb(199,12,71)'})
             .to('#my-name',{color:'rgb(210,30,90)'})
-            .to('#about-me',{color:'rgb(255,255,255)', textShadow:'none'})
+            .to('#steve-cont',{backgroundColor:'rgb(205,7,67,0.5)'})
             .to('#item0',{backgroundColor:'rgb(205,7,67)'})        
             .to('#item1',{backgroundColor:'rgb(199,12,71)'})        
             .to('#item2',{backgroundColor:'rgb(175,17,75)'})        
@@ -131,7 +131,7 @@ const ThemeMenu = () => {
         if(season_name==='summer'){
             TL.to('#front',{color:'rgb(254,169,124)'})
             .to('#my-name',{color:'rgb(254,169,124)'})
-            .to('#about-me',{color:'white', textShadow:'1px 1px black',backgroundColor:'transparent  '})
+            .to('#steve-cont',{backgroundColor:'rgb(237,108,76,0.5)'})
             .to('#item0',{backgroundColor:'rgb(60,185,165)'})        
             .to('#item1',{backgroundColor:'rgb(3,108,133)'})        
             .to('#item2',{backgroundColor:'rgb(60,185,165)'})        
@@ -144,7 +144,7 @@ const ThemeMenu = () => {
         if(season_name==='autumn'){
             TL.to('#front',{color:'rgb(252,150,59)'})
             .to('#my-name',{color:'rgb(220,190,90)'})
-            .to('#about-me',{color:'rgb(220,190,90)', textShadow:'1px 1px black',backgroundColor:'transparent  '})
+            .to('#steve-cont',{backgroundColor:'rgb(252,150,59,0.5)'})
             .to('#item0',{backgroundColor:'rgb(140,50,40)'})        
             .to('#item1',{backgroundColor:'rgb(146,59,51)'})        
             .to('#item2',{backgroundColor:'rgb(150,70,60)'})        
@@ -158,7 +158,7 @@ const ThemeMenu = () => {
             dispatch(setSeasonExtAction({season_name:'bw',season_img:season_img}))
             TL.to('#front',{color:'rgb(251,251,251)'})
                 .to('#my-name',{color:'rgb(251,251,251)'})
-                .to('#about-me',{color:'rgb(251,251,251)'})
+                .to('#steve-cont',{backgroundColor:'transparent'})
                 // .to('#body',{backgroundImage:`none`})
                 .to('#body',{backgroundColor:`rgb(1,1,1)`})
                 .to('#hello',{attr:{src:hello_winter}})

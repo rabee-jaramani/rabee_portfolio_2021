@@ -8,7 +8,7 @@ const Moon = () => {
 
     }, []);
     return (
-        <div class="moon">
+        <div className="moon">
             <p className='hover'>Hover</p>
                 <p className='fact-p'>{fact}</p>
 
