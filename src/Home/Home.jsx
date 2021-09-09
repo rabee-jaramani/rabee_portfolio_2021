@@ -13,12 +13,13 @@ import Moon from './Moon'
 
 
 const Home = () => {
-    const TL=new Timeline()
     const season_img= useSelector(state=>state.Season.season_img)
-    const duration=0.3
-    var delay=0.5
+    
 
     useEffect(() => {
+        const TL=new Timeline()
+        const duration=0.3
+        var delay=0.5
         TL
         .to('.home-cont',{display:'block',delay:delay})
         .from('#hello',{left: -500,duration:duration})
