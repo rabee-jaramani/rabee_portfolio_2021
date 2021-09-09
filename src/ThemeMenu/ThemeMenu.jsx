@@ -8,7 +8,7 @@ import hello_autumn from '../images/hello_autumn.webp'
 
 
 import { useDispatch } from 'react-redux';
-import { setSeasonExtAction } from '../REDUX';
+import { setSeasonAction } from '../REDUX';
 import gsap from 'gsap/gsap-core';
 import $ from 'jquery'
 import summer from '../images/menu_icons/summer.webp'
@@ -29,24 +29,13 @@ import spring_ext from '../images/ext/spring_ext.webp'
 import autumn_ext from '../images/ext/autumn_ext.webp'
 import bw_ext from '../images/ext/star.webp'
 import { Timeline } from 'gsap/gsap-core';
+import { useSelector } from 'react-redux';
 
 const ThemeMenu = () => {
-
-
-
-
-
-
-
-
-
-
-
-
-
     const dispatch = useDispatch()
     const TL=new Timeline()
     const [themeMenuStatus, setThemeMenuStatus] = useState(false);
+    const season =useSelector(state=>state.season)
     const closeThemeMenu=()=>{
         if(themeMenuStatus){
             setThemeMenuStatus(false)
@@ -94,14 +83,21 @@ const ThemeMenu = () => {
         }
     }
 
-    
-    const handleTheme=(season_name,season_img,bg_img,hello_img)=>{
+    const handleTheme=(season_name,season_img_ext,season_bg,season_hello)=>{
         if(season_name!=='bw'){
             $('.moon').css("display",'none')
         }
-        dispatch(setSeasonExtAction({season_name:season_name,season_img:season_img}))
-        gsap.to('#body',{backgroundImage:`url(${bg_img})`})
-        gsap.to('#hello',{attr:{src:hello_img}})
+        console.log(season_name,season_img_ext,season_bg,season_hello)
+        dispatch(setSeasonAction({season_name:season_name,
+            season_img_ext:season_img_ext,
+            season_bg:season_bg,
+            season_hello:season_hello
+        }))
+        
+        gsap.to('#body',{backgroundImage:`url(${season.season_bg})`})
+        gsap.to('#hello',{attr:{src:season.season_hello}})
+
+
         if(season_name==='winter'){
             TL.to('#front',{color:'white'})
             .to('#my-name',{color:'white'})
@@ -155,7 +151,7 @@ const ThemeMenu = () => {
             .to('#item7',{backgroundColor:'rgb(200,120,110)'})        
         }
         if(season_name==='bw'){
-            dispatch(setSeasonExtAction({season_name:'bw',season_img:season_img}))
+            dispatch(setSeasonAction({season_name:'bw',season_img_ext:season_img_ext,season_bg:season_bg}))
             TL.to('#front',{color:'rgb(251,251,251)'})
                 .to('#my-name',{color:'rgb(251,251,251)'})
                 .to('#steve-cont',{backgroundColor:'transparent'})
@@ -177,10 +173,15 @@ const ThemeMenu = () => {
 
 useEffect(() => {
 
+   
+    
+
+
+
     document.querySelector(".winter").addEventListener("click", function(event) {
         event.preventDefault();
 }, false);
-}, );
+},[] );
    
     return (
         <div className='theme-menu-flex'>

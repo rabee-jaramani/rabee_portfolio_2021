@@ -6,7 +6,7 @@ const Menu = () => {
 
     return (
         <div className='menu-flex'>
-            <Link to='/'>
+            <Link to='/' >
                 <div className='menu-item item0' id='item0'>Home</div>
             </Link>
             <div className='menu-item item1' id='item1'>About</div>

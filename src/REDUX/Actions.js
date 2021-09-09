@@ -1,9 +1,9 @@
-import { SET_SEASON_IMG } from "./Constants"
+import { SET_SEASON} from "./Constants"
 
 
-export const setSeasonExtAction=(season)=>{
+export const setSeasonAction=(season)=>{
     return{
-        type:SET_SEASON_IMG,
+        type:SET_SEASON,
         payload:season
     }
 }
