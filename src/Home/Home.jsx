@@ -39,7 +39,7 @@ const Home = () => {
         .from('.my-img-cont',{opacity:0,duration:duration})
         
 
-    }, );
+    }, []);
 
     return (
         <div className='home-cont cont'>

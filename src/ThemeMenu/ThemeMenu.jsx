@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import $ from 'jquery'
 
 import hello_winter from '../images/hello.webp'
@@ -10,7 +10,7 @@ import hello_autumn from '../images/hello_autumn.webp'
 import { useDispatch } from 'react-redux';
 import { setSeasonExtAction } from '../REDUX';
 import gsap from 'gsap/gsap-core';
-
+import $ from 'jquery'
 import summer from '../images/menu_icons/summer.webp'
 import winter from '../images/menu_icons/winter.webp'
 import spring from '../images/menu_icons/spring.webp'
@@ -31,6 +31,18 @@ import bw_ext from '../images/ext/star.webp'
 import { Timeline } from 'gsap/gsap-core';
 
 const ThemeMenu = () => {
+
+
+
+
+
+
+
+
+
+
+
+
 
     const dispatch = useDispatch()
     const TL=new Timeline()
@@ -84,6 +96,9 @@ const ThemeMenu = () => {
 
     
     const handleTheme=(season_name,season_img,bg_img,hello_img)=>{
+        if(season_name!=='bw'){
+            $('.moon').css("display",'none')
+        }
         dispatch(setSeasonExtAction({season_name:season_name,season_img:season_img}))
         gsap.to('#body',{backgroundImage:`url(${bg_img})`})
         gsap.to('#hello',{attr:{src:hello_img}})
@@ -160,7 +175,12 @@ const ThemeMenu = () => {
         }
        
 
+useEffect(() => {
 
+    document.querySelector(".winter").addEventListener("click", function(event) {
+        event.preventDefault();
+}, false);
+}, );
    
     return (
         <div className='theme-menu-flex'>
