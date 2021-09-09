@@ -34,7 +34,7 @@ const ThemeMenu = () => {
 
     const dispatch = useDispatch()
     const TL=new Timeline()
-    const [themeMenuStatus, setThemeMenuStatus] = useState(true);
+    const [themeMenuStatus, setThemeMenuStatus] = useState(false);
     const closeThemeMenu=()=>{
         if(themeMenuStatus){
             setThemeMenuStatus(false)
@@ -98,6 +98,7 @@ const ThemeMenu = () => {
             .to('#item4',{backgroundColor:'rgb(40,100,160)'})        
             .to('#item5',{backgroundColor:'rgb(10,70,128)'})        
             .to('#item6',{backgroundColor:'rgb(3,59,118)'})        
+            .to('#item7',{backgroundColor:'rgb(3,39,108)'})        
         }
         if(season_name==='spring'){
             TL.to('#front',{color:'rgb(199,12,71)'})
@@ -110,6 +111,7 @@ const ThemeMenu = () => {
             .to('#item4',{backgroundColor:'rgb(145,28,85)'})        
             .to('#item5',{backgroundColor:'rgb(130,33,90)'})        
             .to('#item6',{backgroundColor:'rgb(115,38,95)'})        
+            .to('#item7',{backgroundColor:'rgb(100,42,100)'})        
         }
         if(season_name==='summer'){
             TL.to('#front',{color:'rgb(254,169,124)'})
@@ -122,6 +124,7 @@ const ThemeMenu = () => {
             .to('#item4',{backgroundColor:'rgb(42,175,155)'})        
             .to('#item5',{backgroundColor:'rgb(23,120,150)'})       
             .to('#item6',{backgroundColor:'rgb(70,195,175)'})        
+            .to('#item7',{backgroundColor:'rgb(23,120,150)'})        
         }
         if(season_name==='autumn'){
             TL.to('#front',{color:'rgb(252,150,59)'})
@@ -134,6 +137,7 @@ const ThemeMenu = () => {
             .to('#item4',{backgroundColor:'rgb(170,90,80)'})        
             .to('#item5',{backgroundColor:'rgb(180,100,90)'})       
             .to('#item6',{backgroundColor:'rgb(190,110,100)'})        
+            .to('#item7',{backgroundColor:'rgb(200,120,110)'})        
         }
         if(season_name==='bw'){
             dispatch(setSeasonExtAction({season_name:'bw',season_img:season_img}))
@@ -151,6 +155,7 @@ const ThemeMenu = () => {
                 .to('#item4',{backgroundColor:'rgb(140, 140, 140)'})        
                 .to('#item5',{backgroundColor:'rgb(160, 160, 160)'})       
                 .to('#item6',{backgroundColor:'rgb(180, 180, 180)'})    
+                .to('#item7',{backgroundColor:'rgb(200, 200, 200)'})    
         }
         }
        

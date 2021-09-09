@@ -14,7 +14,7 @@ import Skills from "./Skills/Skills";
 function App() {
   useEffect(() => {
     gsap.registerPlugin( CSSPlugin )
-
+    // gsap.to('.moon',{x:1200,duration:3})
    
   }, []);
   return (
