@@ -36,7 +36,7 @@ const Home = () => {
         .from('#front',{opacity:0,duration:duration})
         .from('.line',{left: '-1500px',duration:duration})
         .from('.my-name',{opacity:0,duration:duration})
-        .from('.about-me',{opacity:0,duration:duration})
+        .from('.steve-cont',{opacity:0,duration:duration})
         .from('.my-img-cont',{opacity:0,duration:duration})
         
 
