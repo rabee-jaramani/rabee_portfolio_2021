@@ -5,6 +5,7 @@ import me from '../images/rabee2.webp'
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';
 import Steve from './Steve/Steve';
+import Moon from './Moon'
 // import gsap, { Power1, TweenLite } from 'gsap/all';
 
 
@@ -61,6 +62,7 @@ const Home = () => {
                 <div className='my-img-cont'>
                     <img id='me' src={me} alt='rabee'/>
                 </div>
+                <Moon/>
           <Steve/>
         </div>
     );
