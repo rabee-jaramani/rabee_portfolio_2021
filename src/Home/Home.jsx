@@ -1,19 +1,12 @@
 import React, { useEffect }  from 'react';
 import hello from '../images/hello.webp'
 import me from '../images/rabee2.webp'
-import $ from 'jquery'
+// import $ from 'jquery'
 import { useSelector } from 'react-redux';
 import { Timeline } from 'gsap/gsap-core';
 import Steve from './Steve/Steve';
 import Moon from './Moon'
 import gsap from 'gsap/all';
-// import gsap, { Power1, TweenLite } from 'gsap/all';
-
-// import hello_winter from '../images/hello.webp'
-// import hello_summer from '../images/hello_summer.webp'
-// import hello_spring from '../images/hello_spring.webp'
-// import hello_autumn from '../images/hello_autumn.webp'
-
 
 const Home = () => {
     const season_img_ext= useSelector(state=>state.Season.season_img_ext)
@@ -47,21 +40,12 @@ const Home = () => {
         }
         // if theme is not default
         else{
-            gsap.to('#hello',{attr:{src:season.season_bg}})
-
-        if(season.season_name==='winter')
-        $('.moon').css("display",'none')
-        gsap.to('.home-cont',{display:'block'})
-        gsap.from('.theme-menu-flex',{bottom:'-1000px'})
-        gsap.from('#front',{opacity:0,color:'white'})
-        gsap.from('.line',{left: '-1500px',})
-        gsap.from('.my-name',{opacity:0,color:'white'})
-        gsap.to('#steve-cont',{backgroundColor:'rgb(2,41,78,0.5)'})
-        gsap.from('.my-img-cont',{opacity:0})
-       
+            gsap.to('.moon',{display:'none'})
+            gsap.to('.home-cont',{display:'block',delay:delay})
+            gsap.to('#hello',{attr:{src:season.season_hello}})
         }
 
-    }, [season]);
+    }, );
 
     return (
         <div className='home-cont cont'>
