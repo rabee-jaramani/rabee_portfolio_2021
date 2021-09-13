@@ -10,31 +10,29 @@ import Projects from "./Projects/Projects.jsx";
 import MouseAnimation from "./MouseAnimation/MouseAnimation";
 import Cv from "./CV/Cv";
 import Skills from "./Skills/Skills";
+import About from "./About/About";
 
 function App() {
   useEffect(() => {
-    gsap.registerPlugin( CSSPlugin )
+    gsap.registerPlugin(CSSPlugin);
     // gsap.to('.moon',{x:1200,duration:3})
-   
   }, []);
   return (
     <BrowserRouter>
-    <div className="App">
-    <MouseAnimation/>
+      <div className="App">
+        <MouseAnimation />
 
-          <Switch>
-              <Route path='/' exact component={Home}/>
-              <Route path='/projects' component={Projects}/>
-              <Route path='/cv' component={Cv}/>
-              <Route path='/skills' component={Skills}/>
-
-          </Switch>
-          <ThemeMenu/>
-          <Menu/>
-
-    </div>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/cv" component={Cv} />
+          <Route path="/skills" component={Skills} />
+          <Route path="/about" component={About} />
+        </Switch>
+        <ThemeMenu />
+        <Menu />
+      </div>
     </BrowserRouter>
-
   );
 }
 
