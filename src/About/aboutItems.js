@@ -8,7 +8,7 @@ export const itemsList = [
     doorClass: "bg-door1",
     dateClass: "date1",
     roleClass: "role1",
-    date: "15/02/2000-present",
+    date: "15/02/2021-present",
     role: "Front-End Developer- Freelance",
     country: "United Arab Emirates",
     map: uae,
