@@ -15,7 +15,7 @@ const Griditem = (props) => {
   const [opened, setOpened] = useState(false);
   const openDoor = () => {
     if (!opened) {
-      gsap.to("." + doorClass, { right: -280 });
+      gsap.to("." + doorClass, { right: "-91%", duration: 1 });
       setOpened(true);
     } else {
       gsap.to("." + doorClass, { right: 0 });
