@@ -30,6 +30,8 @@ const About = () => {
               roleClass={e.roleClass}
               date={e.date}
               role={e.role}
+              country={e.country}
+              map={e.map}
             />
           );
         })}

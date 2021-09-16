@@ -30,14 +30,26 @@
             // z-index: -100
             background-color: rgba(255, 255, 255, 0.041)
             backdrop-filter: blur(4px) saturate(100%) contrast(45%) brightness(130%)
-            img
+            .handle
                 position: absolute
                 left: 0
                 top: 50%
                 transform: translateY(-50%)
                 cursor: pointer
-            .date,.role
+                z-index: 5
+            .date,.role,.country
                 width: 100%
                 text-align: center
-                font-size: 2.5rem
-                
+                font-size: 1.5rem
+                font-weight: 600
+                color: rgb(1, 1, 1)
+            .country
+                font-style: italic
+                color: rgb(175, 0, 0)
+            .map
+                width: 100%
+                position: absolute !important
+                right: 0
+                transition: 0.8s
+                &:hover
+                    transform: scale(1.5)

@@ -1,3 +1,6 @@
+import syria from "./images/syria.png";
+import uae from "./images/uae.png";
+import lebanon from "./images/lebanon.png";
 export const itemsList = [
   {
     id: `grid-item${1}`,
@@ -5,8 +8,10 @@ export const itemsList = [
     doorClass: "bg-door1",
     dateClass: "date1",
     roleClass: "role1",
-    date: "15/05/2000",
-    role: "Frontend",
+    date: "15/02/2000-present",
+    role: "Front-End Developer- Freelance",
+    country: "United Arab Emirates",
+    map: uae,
   },
   {
     id: `grid-item${2}`,
@@ -14,8 +19,10 @@ export const itemsList = [
     doorClass: "bg-door2",
     dateClass: "date2",
     roleClass: "role2",
-    date: "15/05/2000",
-    role: "Frontend",
+    date: "02/01/2020–15/02/2021",
+    role: "IT Engineer and Web Developer",
+    country: "United Arab Emirates",
+    map: uae,
   },
   {
     id: `grid-item${3}`,
@@ -23,8 +30,10 @@ export const itemsList = [
     doorClass: "bg-door3",
     dateClass: "date3",
     roleClass: "role3",
-    date: "15/05/2000",
-    role: "Frontend",
+    date: "15/09/2013–10/11/2019",
+    role: "IT Engineer",
+    country: "Lebanon",
+    map: lebanon,
   },
   {
     id: `grid-item${4}`,
@@ -32,8 +41,10 @@ export const itemsList = [
     doorClass: "bg-door4",
     dateClass: "date4",
     roleClass: "role4",
-    date: "15/05/2000",
-    role: "Frontend",
+    date: "01/08/2011–01/11/2011",
+    role: "Teacher",
+    country: "Syria",
+    map: syria,
   },
   {
     id: `grid-item${5}`,
@@ -41,8 +52,10 @@ export const itemsList = [
     doorClass: "bg-door5",
     dateClass: "date5",
     roleClass: "role5",
-    date: "15/05/2000",
-    role: "Frontend",
+    date: "01/08/2011–01/11/2011",
+    role: "Teacher",
+    country: "Syria",
+    map: syria,
   },
   {
     id: `grid-item${6}`,
@@ -50,7 +63,9 @@ export const itemsList = [
     doorClass: "bg-door6",
     dateClass: "date6",
     roleClass: "role6",
-    date: "15/05/2000",
-    role: "Frontend",
+    date: "01/08/2008–01/11/2010",
+    role: "Computer Technician",
+    country: "Syria",
+    map: syria,
   },
 ];
