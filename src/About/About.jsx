@@ -32,6 +32,7 @@ const About = () => {
               role={e.role}
               country={e.country}
               map={e.map}
+              about={e.about}
             />
           );
         })}

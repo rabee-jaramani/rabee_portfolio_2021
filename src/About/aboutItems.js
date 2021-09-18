@@ -12,6 +12,8 @@ export const itemsList = [
     role: "Front-End Developer- Freelance",
     country: "United Arab Emirates",
     map: uae,
+    about:
+      "Woriking as a web developer freelancer and build sites from scratch starting from Information-gathering, Planning, Create the Website Site-map, Design the website, Translate Design to code and give effective feedback, hosting and deploying",
   },
   {
     id: `grid-item${2}`,
@@ -23,6 +25,8 @@ export const itemsList = [
     role: "IT Engineer and Web Developer",
     country: "United Arab Emirates",
     map: uae,
+    about:
+      "Developing a new system(including an E-commerce website) to enhance the work flow between employees and customers",
   },
   {
     id: `grid-item${3}`,
@@ -34,6 +38,8 @@ export const itemsList = [
     role: "IT Engineer",
     country: "Lebanon",
     map: lebanon,
+    about:
+      "-Developing Desktop applications on demands and Software and hardware maintenance for laptops,computers, tablets, tablet pc’s and iPad services.",
   },
   {
     id: `grid-item${4}`,
@@ -45,6 +51,8 @@ export const itemsList = [
     role: "Teacher",
     country: "Syria",
     map: syria,
+    about:
+      "Teaching kids the computer usage and learn them to use the computer as a useful machine for learning goals",
   },
   {
     id: `grid-item${5}`,
@@ -56,6 +64,8 @@ export const itemsList = [
     role: "Teacher",
     country: "Syria",
     map: syria,
+    about:
+      "Teaching ICDL course, ASP.net and C# programming for designing websites",
   },
   {
     id: `grid-item${6}`,
@@ -67,5 +77,7 @@ export const itemsList = [
     role: "Computer Technician",
     country: "Syria",
     map: syria,
+    about:
+      "Installation operating system and programs, Assemble Desktop computers, Fixing any software or hardware problems, Customer service",
   },
 ];

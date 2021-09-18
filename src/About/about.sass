@@ -8,10 +8,12 @@
     margin-left: 50%
     transform: translate(-50%)
     text-align: center
-    text-shadow: 20px 20px 20px #b1b1b1
+    background-color: rgba(0, 0, 0, 0.603)
+    border-radius: 7px
 .about-grid
     display: grid
     width: 90%
+    margin-top: 15px
     margin-left: 50%
     transform: translate(-50%)
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
@@ -58,3 +60,17 @@
                 z-index: -1
                 &:hover
                     transform: scale(1.5)
+        .inside
+            width: 90%
+            padding-left: 5px
+            text-align: center
+            background-color: rgba(0, 0, 0, 0.603)
+
+
+
+
+@media ( max-width: 1000px )
+    .brief
+        width: 80%
+        font-size: 1.1rem
+    

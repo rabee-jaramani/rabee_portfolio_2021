@@ -11,6 +11,7 @@ const Griditem = (props) => {
     role,
     country,
     map,
+    about,
   } = props;
   const [opened, setOpened] = useState(false);
   const openDoor = () => {
@@ -38,7 +39,7 @@ const Griditem = (props) => {
         <div className="country">{country}</div>
         <img className="map" alt="country" src={map} />
       </div>
-      <h1 className="inside">Helloooooooo</h1>
+      <div className="inside">{about}</div>
     </div>
   );
 };
