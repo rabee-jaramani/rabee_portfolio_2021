@@ -80,4 +80,16 @@ export const itemsList = [
     about:
       "Installation operating system and programs, Assemble Desktop computers, Fixing any software or hardware problems, Customer service",
   },
+  {
+    id: `grid-item${7}`,
+    itemClass: "about-item",
+    doorClass: "bg-door7",
+    dateClass: "date7",
+    roleClass: "role7",
+    date: "15/09/2006–01/09/2011",
+    role: "Student in Arab International University",
+    country: "Syria",
+    map: syria,
+    about: "Bachelor degree of Informatics Engineering",
+  },
 ];
