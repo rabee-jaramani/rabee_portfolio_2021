@@ -1,12 +1,32 @@
-import React, { useEffect, useState } from "react";
+import gsap from "gsap/all";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { itemsList } from "./aboutItems";
 import Griditem from "./Griditem";
 const About = () => {
-  const [lock, setLock] = useState();
+  const season_name = useSelector((state) => state.Season.season_name);
   useEffect(() => {
-    // gsap.to(".mover", { display: "none" });
-    console.log("LOCK IS ", lock);
-  }, [setLock, lock]);
+    if (season_name === "winter") {
+      gsap.to(".brief", { backgroundColor: "rgb(49,84,122,0.5)" });
+      gsap.to(".inside", { backgroundColor: "rgb(49,84,122,0.5)" });
+    }
+    if (season_name === "spring") {
+      gsap.to(".brief", { backgroundColor: "rgb(199,12,71,0.5)" });
+      gsap.to(".inside", { backgroundColor: "rgb(199,12,71,0.5)" });
+    }
+    if (season_name === "summer") {
+      gsap.to(".brief", { backgroundColor: "rgb(60,185,165,0.5)" });
+      gsap.to(".inside", { backgroundColor: "rgb(60,185,165,0.5)" });
+    }
+    if (season_name === "autumn") {
+      gsap.to(".brief", { backgroundColor: "rgb(167,83,45,0.5)" });
+      gsap.to(".inside", { backgroundColor: "rgb(167,83,45,0.5)" });
+    }
+    if (season_name === "bw") {
+      gsap.to(".brief", { backgroundColor: "rgba(0, 0, 0, 0.603)" });
+      gsap.to(".inside", { backgroundColor: "rgba(0, 0, 0, 0.603)" });
+    }
+  }, [season_name]);
   return (
     <div className="about-cont">
       <h1 className="title">ABOUT</h1>
