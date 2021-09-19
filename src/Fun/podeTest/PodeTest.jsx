@@ -57,7 +57,7 @@ const PodeTest = () => {
       gsap.to(".questions-flex", { backgroundColor: "rgb(199,12,71,)" });
     }
     if (season_name === "summer") {
-      gsap.to(".questions-flex", { backgroundColor: "rgb(60,185,165,)" });
+      gsap.to(".questions-flex", { backgroundColor: "rgb(30,85,65,)" });
     }
     if (season_name === "autumn") {
       gsap.to(".questions-flex", { backgroundColor: "rgb(167,83,45,)" });
