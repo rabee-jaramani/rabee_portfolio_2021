@@ -11,6 +11,8 @@ import MouseAnimation from "./MouseAnimation/MouseAnimation";
 import Cv from "./CV/Cv";
 import Skills from "./Skills/Skills";
 import About from "./About/About";
+import Fun from "./Fun/Fun";
+import PodeTest from "./Fun/podeTest/PodeTest";
 
 function App() {
   useEffect(() => {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/cv" component={Cv} />
           <Route path="/skills" component={Skills} />
           <Route path="/about" component={About} />
+          <Route path="/fun" component={Fun} />
+          <Route path="/pode_test" component={PodeTest} />
         </Switch>
         <ThemeMenu />
         <Menu />

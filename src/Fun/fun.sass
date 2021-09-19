@@ -1,0 +1,23 @@
+.fun-grid
+    position: relative
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+    grid-gap: 1.5rem
+    align-items: flex-start
+    text-align: center
+    width: 90%
+    margin-left: 50%
+    transform: translate(-50%)
+    .funt-item
+        background-color: rgb(156, 156, 156)
+        padding-bottom: 10px
+        img
+            width: 100%
+        .bttn
+            cursor: pointer
+            background-color: white
+            color: black
+            margin: 0 10px
+            &:hover
+                background-color: black
+                color: white

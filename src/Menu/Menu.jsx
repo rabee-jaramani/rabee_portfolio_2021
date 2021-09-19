@@ -30,9 +30,11 @@ const Menu = () => {
           My CV
         </div>
       </Link>
-      <div className="menu-item item5" id="item5">
-        Contact
-      </div>
+      <Link to="/fun">
+        <div className="menu-item item5" id="item5">
+          Fun
+        </div>
+      </Link>
       <div className="menu-item item6" id="item6">
         Redux
       </div>
