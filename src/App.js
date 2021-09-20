@@ -1,6 +1,7 @@
 import { CSSPlugin } from "gsap/all";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import gsap from "gsap/gsap-core";
+import ReactGa from "react-ga";
 import { useEffect } from "react";
 import Home from "./Home/Home";
 import Menu from "./Menu/Menu";
@@ -18,6 +19,9 @@ function App() {
   useEffect(() => {
     gsap.registerPlugin(CSSPlugin);
     // gsap.to('.moon',{x:1200,duration:3})
+
+    ReactGa.initialize("UA-208005111-1");
+    ReactGa.pageview("/home");
   }, []);
   return (
     <BrowserRouter>
