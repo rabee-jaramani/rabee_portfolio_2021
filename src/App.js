@@ -21,7 +21,7 @@ function App() {
     // gsap.to('.moon',{x:1200,duration:3})
 
     ReactGa.initialize("UA-208005111-1");
-    ReactGa.pageview("/home");
+    ReactGa.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
     <BrowserRouter>
