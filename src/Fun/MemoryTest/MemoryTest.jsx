@@ -120,19 +120,19 @@ const MemoryTest = () => {
       });
     }
     // if easy and timer more than 20 seconds make timer yellow
-    if (difficulty === "easy" && timer > 20) {
-      gsap.to("#timer", { backgroundColor: "rgb(248,225,83)" });
-    }
-    if (difficulty === "easy" && timer > 30) {
-      gsap.to("#timer", { backgroundColor: "rgb(240,44,45)" });
-    }
-    if (difficulty === "easy" && clicks > 10) {
-      gsap.to("#clicks", { backgroundColor: "rgb(248,225,83)" });
-    }
-    if (difficulty === "easy" && clicks > 20) {
-      gsap.to("#clicks", { backgroundColor: "rgb(240,44,45)" });
-    }
-  }, [difficulty]);
+    // if (difficulty === "easy" && timer > 20) {
+    //   gsap.to("#timer", { backgroundColor: "rgb(248,225,83)" });
+    // }
+    // if (difficulty === "easy" && timer > 30) {
+    //   gsap.to("#timer", { backgroundColor: "rgb(240,44,45)" });
+    // }
+    // if (difficulty === "easy" && clicks > 10) {
+    //   gsap.to("#clicks", { backgroundColor: "rgb(248,225,83)" });
+    // }
+    // if (difficulty === "easy" && clicks > 20) {
+    //   gsap.to("#clicks", { backgroundColor: "rgb(240,44,45)" });
+    // }
+  }, [difficulty, setImages_array]);
   return (
     <div className="memory-test-cont">
       <h1 className="title">Memory test</h1>
