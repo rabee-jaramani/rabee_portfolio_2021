@@ -36,221 +36,135 @@ import a35 from "../images/memory_test/35.png";
 import a36 from "../images/memory_test/36.png";
 
 export const images_list = [
-  {
-    id: 1,
-    name: "a1",
-    src: a1,
-    className: "img-item1",
-  },
-  {
-    id: 2,
-    name: "a2",
-    src: a2,
-    className: "img-item2",
-  },
-  {
-    id: 3,
-    name: "a3",
-    src: a3,
-    className: "img-item3",
-  },
-  {
-    id: 4,
-    name: "a4",
-    src: a4,
-    className: "img-item4",
-  },
-  {
-    id: 5,
-    name: "a5",
-    src: a5,
-    className: "img-item5",
-  },
-  {
-    id: 6,
-    name: "a6",
-    src: a6,
-    className: "img-item6",
-  },
-  {
-    id: 7,
-    name: "a7",
-    src: a7,
-    className: "img-item7",
-  },
-  {
-    id: 8,
-    name: "a8",
-    src: a8,
-    className: "img-item8",
-  },
-  {
-    id: 9,
-    name: "a9",
-    src: a9,
-    className: "img-item9",
-  },
-  {
-    id: 10,
-    name: "a10",
-    src: a10,
-    className: "img-item10",
-  },
-  {
-    id: 11,
-    name: "a11",
-    src: a11,
-    className: "img-item11",
-  },
-  {
-    id: 12,
-    name: "a12",
-    src: a12,
-    className: "img-item12",
-  },
-  {
-    id: 13,
-    name: "a13",
-    src: a13,
-    className: "img-item13",
-  },
-  {
-    id: 14,
-    name: "a14",
-    src: a14,
-    className: "img-item14",
-  },
-  {
-    id: 15,
-    name: "a15",
-    src: a15,
-    className: "img-item15",
-  },
-  {
-    id: 16,
-    name: "a16",
-    src: a16,
-    className: "img-item16",
-  },
-
-  {
-    id: 17,
-    name: "a17",
-    src: a17,
-    className: "img-item17",
-  },
-  {
-    id: 18,
-    name: "a18",
-    src: a18,
-    className: "img-item18",
-  },
-  {
-    id: 19,
-    name: "a19",
-    src: a19,
-    className: "img-item19",
-  },
-  {
-    id: 20,
-    name: "a20",
-    src: a20,
-    className: "img-item20",
-  },
-  {
-    id: 21,
-    name: "a21",
-    src: a21,
-    className: "img-item21",
-  },
-  {
-    id: 22,
-    name: "a22",
-    src: a22,
-    className: "img-item22",
-  },
-  {
-    id: 23,
-    name: "a23",
-    src: a23,
-    className: "img-item23",
-  },
-  {
-    id: 24,
-    name: "a24",
-    src: a24,
-    className: "img-item24",
-  },
-  {
-    id: 25,
-    name: "a25",
-    src: a25,
-    className: "img-item25",
-  },
-  {
-    id: 26,
-    name: "a26",
-    src: a26,
-    className: "img-item26",
-  },
-  {
-    id: 27,
-    name: "a27",
-    src: a27,
-    className: "img-item27",
-  },
-  {
-    id: 28,
-    name: "a28",
-    src: a28,
-    className: "img-item28",
-  },
-  {
-    id: 29,
-    name: "a29",
-    src: a29,
-    className: "img-item29",
-  },
-  {
-    id: 30,
-    name: "a30",
-    src: a30,
-    className: "img-item30",
-  },
-  {
-    id: 31,
-    name: "a31",
-    src: a31,
-    className: "img-item31",
-  },
-  {
-    id: 32,
-    name: "a32",
-    src: a32,
-    className: "img-item32",
-  },
-  {
-    id: 33,
-    name: "a33",
-    src: a33,
-    className: "img-item33",
-  },
-  {
-    id: 34,
-    name: "a34",
-    src: a34,
-    className: "img-item34",
-  },
-  {
-    id: 35,
-    name: "a35",
-    src: a35,
-    className: "img-item35",
-  },
-  {
-    id: 36,
-    name: "a36",
-    src: a36,
-    className: "img-item36",
-  },
+  a1,
+  a2,
+  a3,
+  a4,
+  a5,
+  a6,
+  a7,
+  a8,
+  a9,
+  a10,
+  a11,
+  a12,
+  a13,
+  a14,
+  a15,
+  a16,
+  a17,
+  a18,
+  a19,
+  a20,
+  a21,
+  a22,
+  a23,
+  a24,
+  a25,
+  a26,
+  a27,
+  a28,
+  a29,
+  a30,
+  a31,
+  a32,
+  a33,
+  a34,
+  a35,
+  a36,
 ];
+const images_list_easy = [
+  { src: a1, name: "a1" },
+  { src: a2, name: "a2" },
+  { src: a3, name: "a3" },
+  { src: a4, name: "a4" },
+  { src: a5, name: "a5" },
+  { src: a6, name: "a6" },
+  { src: a7, name: "a7" },
+  { src: a8, name: "a8" },
+  { src: a1, name: "a1" },
+  { src: a2, name: "a2" },
+  { src: a3, name: "a3" },
+  { src: a4, name: "a4" },
+  { src: a5, name: "a5" },
+  { src: a6, name: "a6" },
+  { src: a7, name: "a7" },
+  { src: a8, name: "a8" },
+];
+const images_list_hard = [
+  { src: a1, name: "a1" },
+  { src: a2, name: "a2" },
+  { src: a3, name: "a3" },
+  { src: a4, name: "a4" },
+  { src: a5, name: "a5" },
+  { src: a6, name: "a6" },
+  { src: a7, name: "a7" },
+  { src: a8, name: "a8" },
+  { src: a9, name: "a9" },
+  { src: a10, name: "a10" },
+  { src: a11, name: "a11" },
+  { src: a12, name: "a12" },
+  { src: a13, name: "a13" },
+  { src: a14, name: "a14" },
+  { src: a15, name: "a15" },
+  { src: a16, name: "a16" },
+  { src: a17, name: "a17" },
+  { src: a18, name: "a18" },
+  { src: a1, name: "a1" },
+  { src: a2, name: "a2" },
+  { src: a3, name: "a3" },
+  { src: a4, name: "a4" },
+  { src: a5, name: "a5" },
+  { src: a6, name: "a6" },
+  { src: a7, name: "a7" },
+  { src: a8, name: "a8" },
+  { src: a9, name: "a9" },
+  { src: a10, name: "a10" },
+  { src: a11, name: "a11" },
+  { src: a12, name: "a12" },
+  { src: a13, name: "a13" },
+  { src: a14, name: "a14" },
+  { src: a15, name: "a15" },
+  { src: a16, name: "a16" },
+  { src: a17, name: "a17" },
+  { src: a18, name: "a18" },
+];
+var random = null;
+// generate random number
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * max);
+};
+
+// function to fill taken indexes list
+const fillIndexes = (max) => {
+  var taken_indexes = [];
+  taken_indexes.length = 0;
+  while (taken_indexes.length !== max) {
+    random = getRandomInt(max);
+    if (taken_indexes.indexOf(random) < 0) {
+      taken_indexes.push(random);
+    }
+  }
+  return taken_indexes;
+};
+
+// fill a list with lingth of 16 from main list images
+export const fillListImages = (length) => {
+  var indexesList = fillIndexes(length);
+  var temp_list = [];
+  for (let i = 0; i < length; i++) {
+    var item = { id: "", name: "", src: "", className: "" };
+    item.id = i;
+    if (length === 16) {
+      item.name = images_list_easy[indexesList[i]].name;
+      item.src = images_list_easy[indexesList[i]].src;
+    }
+    if (length === 36) {
+      item.name = images_list_hard[indexesList[i]].name;
+      item.src = images_list_hard[indexesList[i]].src;
+    }
+    item.className = `img-item${i}`;
+    temp_list.push(item);
+  }
+  return temp_list;
+};
