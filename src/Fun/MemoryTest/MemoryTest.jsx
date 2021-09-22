@@ -11,6 +11,7 @@ const MemoryTest = () => {
   const [timer, setTimer] = useState(0);
   const [clicks, setClicks] = useState(0);
   const [winCounter, setWinCounter] = useState(0);
+  const [finalTime, setFinalTime] = useState();
   // /////////////////////////////////////////////
   const handleImageClick = (owner_img_id, owner_img_name) => {
     setClicks(clicks + 1);
@@ -43,9 +44,23 @@ const MemoryTest = () => {
       // make the img1 background green
       gsap.to(`.back-card${img1_id}`, { backgroundColor: "green" });
       gsap.to(`.img-item${img1_id}`, { pointerEvents: "none" });
-      // Wonnnnnnnnnnnnnnn
-      if (winCounter === 7) {
-        alert("winnnnnnnnn");
+      // Winner
+      if (difficulty === "easy") {
+        if (winCounter === 7) {
+          gsap.to(".won", { display: "block" });
+          setFinalTime(timer);
+          setTimeout(() => {
+            window.location.reload();
+          }, 5000);
+        }
+      } else {
+        if (winCounter === 17) {
+          gsap.to(".won", { display: "block" });
+          setFinalTime(timer);
+          setTimeout(() => {
+            window.location.reload();
+          }, 5000);
+        }
       }
       // reset img1 parameters
       setImg1_name(null);
@@ -100,9 +115,7 @@ const MemoryTest = () => {
     $(".start-btn").prop("disabled", true);
     gsap.to(".images-grid", { pointerEvents: "all" });
   };
-  // function getRandomInt(max) {
-  //   return Math.floor(Math.random() * max);
-  // }
+
   // if easy and timer more than 20 seconds make timer yellow
   if (difficulty === "easy" && timer > 20) {
     gsap.to("#timer", { backgroundColor: "rgb(248,225,83)" });
@@ -173,6 +186,10 @@ const MemoryTest = () => {
         </button>
         <div className="clicks-cont">15</div> */}
       </div>
+      <h1 className="won">
+        WINNER <h2>your clicks {clicks}</h2>
+        <h2>your time {finalTime}</h2>
+      </h1>
       <div className="images-grid">
         {images_array.map((e) => {
           return (
