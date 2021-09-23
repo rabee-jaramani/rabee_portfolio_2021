@@ -75,6 +75,25 @@
     width: 5px
     border: 5px solid white
     border-radius: 50%
+.animation-cont
+    position: absolute
+    top: 10vw
+    left: 25vw
+    width: 200px
+    height: 200px
+    cursor: pointer
+    img
+        position: relative
+        width: 100%
+        animation: rotation 12s infinite linear
+@keyframes rotation
+    0%
+        transform: rotate(0deg)
+        
+    100%
+        transform: rotate(359deg)
+
+        
 @media ( max-width: 1580px )
     .home-cont
         .hello
@@ -109,3 +128,14 @@
 
         .line
             margin-top: 0px
+    .animation-cont
+        top: 60vw
+        left: 25vw
+        width: 150px
+        height: 150px
+@media ( max-width: 450px )
+     .animation-cont
+        top: 70vh
+        left: 25vw
+        width: 150px
+        height: 150px
