@@ -7,12 +7,13 @@ import { Timeline } from "gsap/gsap-core";
 import Steve from "./Steve/Steve";
 import Moon from "./Moon";
 import gsap, { Sine } from "gsap/all";
-import alien from "./alien.png";
+import alien from "../images/alien/alien.png";
 const Home = () => {
   const season_img_ext = useSelector((state) => state.Season.season_img_ext);
   const season = useSelector((state) => state.Season);
 
   useEffect(() => {
+    // set alien image
     // ////////////////////////////// alien floating
 
     const alien = document.querySelector(".animation-cont");
@@ -132,7 +133,11 @@ const Home = () => {
           }, 1000);
         }}
       >
-        <img src={alien} alt="" className="gif-img" />
+        <img
+          src={season.season_alien ? season.season_alien : alien}
+          alt=""
+          className="gif-img"
+        />
       </div>
     </div>
   );

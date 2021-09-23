@@ -21,6 +21,10 @@ import summer_bg from "../images/backgrounds/summer.webp";
 import spring_bg from "../images/backgrounds/spring.webp";
 import autumn_bg from "../images/backgrounds/autumn.webp";
 import bw_bg from "../images/backgrounds/bw.webp";
+import alien from "../images/alien/alien.png";
+import spring_alien from "../images/alien/spring_alien.png";
+import summer_alien from "../images/alien/summer_alien.png";
+import autumn_alien from "../images/alien/autumn_alien.png";
 
 import summer_ext from "../images/ext/summer_ext.webp";
 import winter_ext from "../images/ext/winter_ext.webp";
@@ -86,7 +90,8 @@ const ThemeMenu = () => {
     season_name,
     season_img_ext,
     season_bg,
-    season_hello
+    season_hello,
+    alien_img
   ) => {
     if (season_name !== "bw") {
       $(".moon").css("display", "none");
@@ -98,6 +103,7 @@ const ThemeMenu = () => {
         season_img_ext: season_img_ext,
         season_bg: season_bg,
         season_hello: season_hello,
+        season_alien: alien_img,
       })
     );
 
@@ -217,7 +223,7 @@ const ThemeMenu = () => {
       <div
         className="winter flex-item"
         onClick={() =>
-          handleTheme("winter", winter_ext, winter_bg, hello_winter)
+          handleTheme("winter", winter_ext, winter_bg, hello_winter, alien)
         }
       >
         <img src={winter} alt="winter" />
@@ -227,7 +233,13 @@ const ThemeMenu = () => {
       <div
         className="spring flex-item"
         onClick={() =>
-          handleTheme("spring", spring_ext, spring_bg, hello_spring)
+          handleTheme(
+            "spring",
+            spring_ext,
+            spring_bg,
+            hello_spring,
+            spring_alien
+          )
         }
       >
         <img src={spring} alt="spring" />
@@ -237,7 +249,13 @@ const ThemeMenu = () => {
       <div
         className="summer flex-item"
         onClick={() =>
-          handleTheme("summer", summer_ext, summer_bg, hello_summer)
+          handleTheme(
+            "summer",
+            summer_ext,
+            summer_bg,
+            hello_summer,
+            summer_alien
+          )
         }
       >
         <img src={summer} alt="summer" />
@@ -247,7 +265,13 @@ const ThemeMenu = () => {
       <div
         className="autumn flex-item"
         onClick={() =>
-          handleTheme("autumn", autumn_ext, autumn_bg, hello_autumn)
+          handleTheme(
+            "autumn",
+            autumn_ext,
+            autumn_bg,
+            hello_autumn,
+            autumn_alien
+          )
         }
       >
         <img src={autumn} alt="land" />
@@ -256,7 +280,7 @@ const ThemeMenu = () => {
 
       <div
         className="blackwhite flex-item"
-        onClick={() => handleTheme("bw", bw_ext, bw_bg, null)}
+        onClick={() => handleTheme("bw", bw_ext, bw_bg, null, alien)}
       >
         <img src={bw} alt="bw" />
         <div className="theme-title">BW</div>
