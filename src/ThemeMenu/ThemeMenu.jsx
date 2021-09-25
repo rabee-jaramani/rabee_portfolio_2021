@@ -21,10 +21,10 @@ import summer_bg from "../images/backgrounds/summer.webp";
 import spring_bg from "../images/backgrounds/spring.webp";
 import autumn_bg from "../images/backgrounds/autumn.webp";
 import bw_bg from "../images/backgrounds/bw.webp";
-import alien from "../images/alien/alien.png";
-import spring_alien from "../images/alien/spring_alien.png";
-import summer_alien from "../images/alien/summer_alien.png";
-import autumn_alien from "../images/alien/autumn_alien.png";
+import alien from "../images/alien/alien.webp";
+import spring_alien from "../images/alien/spring_alien.webp";
+import summer_alien from "../images/alien/summer_alien.webp";
+import autumn_alien from "../images/alien/autumn_alien.webp";
 
 import summer_ext from "../images/ext/summer_ext.webp";
 import winter_ext from "../images/ext/winter_ext.webp";

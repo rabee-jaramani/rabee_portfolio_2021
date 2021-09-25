@@ -7,7 +7,7 @@ import { Timeline } from "gsap/gsap-core";
 import Steve from "./Steve/Steve";
 import Moon from "./Moon";
 import gsap, { Sine } from "gsap/all";
-import alien from "../images/alien/alien.png";
+import alien from "../images/alien/alien.webp";
 const Home = () => {
   const season_img_ext = useSelector((state) => state.Season.season_img_ext);
   const season = useSelector((state) => state.Season);

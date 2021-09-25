@@ -1,5 +1,5 @@
-import pode_img from "./images/pode_img.png";
-import memory_test from "./images/memory_test.png";
+import pode_img from "./images/pode_img.webp";
+import memory_test from "./images/memory_test.webp";
 
 export const fun_items = [
   {

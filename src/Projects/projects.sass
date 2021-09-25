@@ -2,11 +2,11 @@
 .projects
     position: relative
     display: grid
-    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
     grid-gap: 1.5rem
     align-items: flex-start
     text-align: center
-    width: 90%
+    width: 50%
     margin-left: 50%
     transform: translate(-50%)
 
@@ -14,4 +14,6 @@
     .projects
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
         grid-gap: 1rem
-    
+@media ( max-width: 750px )
+    .projects
+        width: 90%
