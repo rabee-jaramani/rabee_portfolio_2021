@@ -20,6 +20,7 @@ function App() {
   useEffect(() => {
     gsap.registerPlugin(CSSPlugin);
     // gsap.to('.moon',{x:1200,duration:3})
+    gsap.to(".menu-flex", { display: "flex" });
 
     ReactGa.initialize("UA-208005111-1");
     ReactGa.pageview(window.location.pathname + window.location.search);
