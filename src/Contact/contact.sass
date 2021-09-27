@@ -1,0 +1,84 @@
+
+    
+    
+    
+.contact-cont
+    width: 100%
+    margin-left: 50%
+    transform: translate(-50%)
+    background-color: rgba(231, 231, 231, 0.534)
+    color: black
+    height: 100vh
+    overflow: hidden
+.links
+  display: flex
+  flex-direction: column
+  width: 100%
+  justify-content: space-evenly
+  .link
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 10px
+    i
+      font-size: 2rem
+      margin-right: 10px
+      color: rgb(78,116,187)
+.contact-form-cont
+  max-width: 500px
+  min-width: 300px
+  padding: 20px 10px
+  display: flex
+  flex-direction: column
+  margin-left: 50%
+  transform: translate(-50%)
+  background-color: white
+  border-radius: 5px
+.contact-form-title
+  width: 100%
+  text-align: center
+  font-size: 1.5rem
+.contact-form-field-cont
+  position: relative
+  display: flex
+  flex-direction: column
+  margin: 10px 0
+.text-input-label
+.text-input,textarea
+  font-size: 1.1rem
+  border: none
+  border-bottom: solid 1px rgb(0, 59, 223)
+  &:focus
+    outline: none
+.btn-cont
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: rgb(78, 116, 187)
+  height: 50px
+  cursor: pointer
+  transition: 0.3s
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 2px 2px 5px rgb(0, 0, 0)
+
+.contact-form-btn
+  color: rgb(255, 255, 255)
+#svg
+  // width: 100%
+  position: absolute
+  left: 100px
+  top: 200px
+  opacity: 0.8
+  z-index: -100
+#svg_waves
+  opacity: 0.8
+@media ( max-width: 800px )
+  .contact-form-cont
+    padding: 20px 5px
+  #svg
+    margin-top: -100px
+
+
+  
+

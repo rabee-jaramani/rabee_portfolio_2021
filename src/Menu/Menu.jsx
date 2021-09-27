@@ -35,12 +35,16 @@ const Menu = () => {
           Fun
         </div>
       </Link>
-      <div className="menu-item item6" id="item6">
-        Redux
-      </div>
-      <div className="menu-item item7" id="item7">
+
+      <Link to="/contact">
+        <div className="menu-item item6" id="item6">
+          Contact
+        </div>
+      </Link>
+
+      {/* <div className="menu-item item7" id="item7">
         Api
-      </div>
+      </div> */}
     </div>
   );
 };

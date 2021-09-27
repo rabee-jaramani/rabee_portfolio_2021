@@ -15,8 +15,8 @@ html
     overflow-x: hidden
 body
     background-color: rgb(1, 1, 1)
-    // background-image: url(./images/backgrounds/bw.webp)
     background-image: url(./images/backgrounds/bw.webp)
+    // background-color: rgb(190, 175, 90)
     background-size: cover !important
     background-attachment: fixed
     height: 100vh
@@ -49,7 +49,14 @@ body
 .title
     width: 100%
     text-align: center
-    padding-top: 20px    
+    padding-top: 20px
+.title-underline
+    width: 100px
+    margin-left: 50%
+    transform: translate(-50%)
+    margin-bottom: 20px
+
+
 
 a:link
     text-decoration: none
@@ -73,7 +80,6 @@ a:active
 @import MouseAnimation/MouseAnimation.sass
 @import ThemeMenu/themeMenu.sass
 @import Menu/menu.sass
-@import Spinner/spinner.sass
 @import Projects/projects.sass
 @import Projects/cards.sass
 @import CV/cv.sass
@@ -84,3 +90,4 @@ a:active
 @import Fun/fun.sass
 @import Fun/podeTest/pode_test.sass
 @import Fun/MemoryTest/memory_test.sass
+@import Contact/contact.sass

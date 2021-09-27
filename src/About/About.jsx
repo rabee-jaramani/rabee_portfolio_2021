@@ -30,6 +30,8 @@ const About = () => {
   return (
     <div className="about-cont">
       <h1 className="title">ABOUT</h1>
+      <hr className="title-underline" />
+
       <div className="brief">
         First-rate Informatics Engineer with Innovative tech mind and +9 years
         of experience in developing, programming and supporting. A FrontEnd

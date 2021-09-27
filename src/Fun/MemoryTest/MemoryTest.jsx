@@ -165,6 +165,8 @@ const MemoryTest = () => {
   return (
     <div className="memory-test-cont">
       <h1 className="title">Memory test</h1>
+      <hr className="title-underline" />
+
       <div className="difficulty-form">
         <label htmlFor="difficulty">Choose difficulty:</label>
         <select

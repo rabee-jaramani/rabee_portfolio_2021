@@ -15,6 +15,7 @@ import About from "./About/About";
 import Fun from "./Fun/Fun";
 import PodeTest from "./Fun/podeTest/PodeTest";
 import MemoryTest from "./Fun/MemoryTest/MemoryTest";
+import Contact from "./Contact/Contact";
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/fun" component={Fun} />
           <Route path="/pode_test" component={PodeTest} />
           <Route path="/memory_test" component={MemoryTest} />
+          <Route path="/contact" component={Contact} />
         </Switch>
         <ThemeMenu />
         <Menu />

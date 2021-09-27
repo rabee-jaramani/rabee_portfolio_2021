@@ -5,6 +5,8 @@ const Fun = () => {
   return (
     <div className="fun-cont">
       <h1 className="title">FUN</h1>
+      <hr className="title-underline" />
+
       <div className="fun-grid">
         {fun_items.map((e) => {
           return (
