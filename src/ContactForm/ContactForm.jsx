@@ -20,7 +20,13 @@ const ContactForm = () => {
         .required("Required"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      alert(
+        JSON.stringify(
+          "Thank you " + values.name + " for your message",
+          null,
+          2
+        )
+      );
     },
   });
   return (
