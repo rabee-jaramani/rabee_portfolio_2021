@@ -16,6 +16,7 @@ import Fun from "./Fun/Fun";
 import PodeTest from "./Fun/podeTest/PodeTest";
 import MemoryTest from "./Fun/MemoryTest/MemoryTest";
 import Contact from "./Contact/Contact";
+import WeatherApp from "./Fun/WeatherApp/WeatherApp";
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
           <Route path="/pode_test" component={PodeTest} />
           <Route path="/memory_test" component={MemoryTest} />
           <Route path="/contact" component={Contact} />
+          <Route path="/weatherapp" component={WeatherApp} />
         </Switch>
         <ThemeMenu />
         <Menu />

@@ -1,5 +1,6 @@
 import pode_img from "./images/pode_img.webp";
 import memory_test from "./images/memory_test.webp";
+import weatherapp from "./images/weatherapp.jpg";
 
 export const fun_items = [
   {
@@ -15,5 +16,12 @@ export const fun_items = [
     title: "MEMORY TEST",
     desc: "Check your memory",
     link: "/memory_test",
+  },
+  {
+    id: 3,
+    img: weatherapp,
+    title: "WEATHER APP",
+    desc: "Check the weather",
+    link: "/weatherapp",
   },
 ];
