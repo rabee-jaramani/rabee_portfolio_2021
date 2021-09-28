@@ -1,7 +1,12 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+import gsap from "gsap/all";
 const ContactForm = () => {
+  init("user_WXMrG9H2675m2AFa27nY0");
+  const [btn_status, setBtn_status] = useState("Submit");
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -10,7 +15,7 @@ const ContactForm = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(20, "Must be 20 characters or less")
         .min(3, "Must be 3 characters or more")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -20,12 +25,27 @@ const ContactForm = () => {
         .required("Required"),
     }),
     onSubmit: (values) => {
-      alert(
-        JSON.stringify(
-          "Thank you " + values.name + " for your message",
-          null,
-          2
-        )
+      var templateParams = {
+        name: values.name,
+        email: values.email,
+        message: values.message,
+      };
+      gsap.to("#btn-cont", {
+        opacity: 0.5,
+        pointerEvents: "none",
+        duration: 0.1,
+      });
+      setBtn_status("Sending...");
+      emailjs.send("service_ebc0b89", "template_wtoqeqk", templateParams).then(
+        (result) => {
+          console.log("this is the response", result.text);
+          alert("Thank you " + values.name + " for your message 😊");
+          gsap.to("#btn-cont", { opacity: 1, pointerEvents: "all" });
+          setBtn_status("Submit");
+        },
+        (error) => {
+          console.log("this is error", error.text);
+        }
       );
     },
   });
@@ -85,8 +105,8 @@ const ContactForm = () => {
           {formik.touched.email && formik.errors.email ? (
             <div className="error-message">{formik.errors.email}</div>
           ) : null}
-          {/* <ErrorMessage name="email" render={renderError} /> */}
         </div>
+
         <div className="contact-form-field-cont">
           <label className="text-input-label" htmlFor="message">
             Your message
@@ -103,11 +123,11 @@ const ContactForm = () => {
           {formik.touched.message && formik.errors.message ? (
             <div className="error-message">{formik.errors.message}</div>
           ) : null}
-          {/* <ErrorMessage name="message" render={renderError} /> */}
         </div>
-        <div className="contact-form-field-cont btn-cont">
+
+        <div id="btn-cont" className="contact-form-field-cont btn-cont">
           <button type="submit" className="contact-form-btn">
-            Submit
+            {btn_status}
           </button>
         </div>
       </form>
