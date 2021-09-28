@@ -12,6 +12,7 @@ const Projects = () => {
           return (
             <Card
               key={e.id}
+              id={e.id}
               proj_name={e.proj_name}
               proj_img={e.proj_img}
               proj_tools={e.proj_tools}

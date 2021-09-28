@@ -7,6 +7,7 @@ import jad from "./images/jad.webp";
 import mazyad from "./images/mazyad.webp";
 import rose_shop from "./images/rose_shop.webp";
 import chatapp from "./images/chattapp.webp";
+import rabee2 from "./images/rabeeold.webp";
 
 export const projectsList = [
   {
@@ -72,5 +73,12 @@ export const projectsList = [
     proj_img: chatapp,
     proj_tools: ["React-js", "JavaScript", "Nodejs", "Firebase", "Chat Engine"],
     proj_link: "https://chatapp-rabeexxxx.vercel.app/",
+  },
+  {
+    id: 10,
+    proj_name: "My Old Portfolio",
+    proj_img: rabee2,
+    proj_tools: ["React-js", "JavaScript", "GSAP", "TypeIt", "CSS"],
+    proj_link: "https://rabee.netlify.app/",
   },
 ];

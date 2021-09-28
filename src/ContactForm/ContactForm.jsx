@@ -4,8 +4,10 @@ import * as Yup from "yup";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
 import gsap from "gsap/all";
+import { useHistory } from "react-router";
 const ContactForm = () => {
   init("user_WXMrG9H2675m2AFa27nY0");
+  const history = useHistory();
   const [btn_status, setBtn_status] = useState("Submit");
   const formik = useFormik({
     initialValues: {
@@ -42,6 +44,9 @@ const ContactForm = () => {
           alert("Thank you " + values.name + " for your message 😊");
           gsap.to("#btn-cont", { opacity: 1, pointerEvents: "all" });
           setBtn_status("Submit");
+          setTimeout(() => {
+            history.push("/");
+          }, 1000);
         },
         (error) => {
           console.log("this is error", error.text);
