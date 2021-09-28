@@ -17,8 +17,8 @@ const Svg = () => {
         transform="translate(-203.21014 -36)"
         fill="none"
         stroke="#3f3d56"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <path
         d="M685.2975,237.85074H483.44675Q423.562,136.92537,483.44675,36H685.2975Q601.56463,136.92537,685.2975,237.85074Z"
@@ -158,32 +158,32 @@ const Svg = () => {
         transform="translate(-203.21014 -36)"
         fill="none"
         stroke="#3f3d56"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <path
         d="M810.26354,468.05793c-55.45907,29.91083-127.8227,48.011-206.98144,48.011-75.89677,0-145.54691-16.63914-200.04-44.37389"
         transform="translate(-203.21014 -36)"
         fill="none"
         stroke="#3f3d56"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <path
         d="M731.188,147.90572c105.54421,27.741,180.712,88.76157,187.70175,160.63026"
         transform="translate(-203.21014 -36)"
         fill="none"
         stroke="#3f3d56"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <path
         d="M302.37337,261.82294c17.78361-32.68552,50.27112-61.45009,92.83643-83.54855"
         transform="translate(-203.21014 -36)"
         fill="none"
         stroke="#3f3d56"
-        stroke-miterlimit="10"
-        stroke-width="2"
+        strokeMiterlimit="10"
+        strokeWidth="2"
       />
       <path
         d="M520.56793,611.70682H722.41867q59.88471-100.92537,0-201.85074H520.56793Q604.3008,510.78145,520.56793,611.70682Z"

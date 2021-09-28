@@ -51,19 +51,24 @@
   &:focus
     outline: none
 .btn-cont
+  position: relative
   display: flex
   align-items: center
   justify-content: center
-  background-color: rgb(78, 116, 187)
   height: 50px
-  cursor: pointer
   transition: 0.3s
   &:hover
     transform: translateY(-3px)
     box-shadow: 2px 2px 5px rgb(0, 0, 0)
 
 .contact-form-btn
+  width: 100%
+  height: 100%
+  cursor: pointer
+  background-color: rgb(78, 116, 187)
   color: rgb(255, 255, 255)
+.error-message
+  color: red
 #svg
   // width: 100%
   position: absolute
