@@ -1,65 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { BounceLoader } from "react-spinners";
-import axios from "axios";
+import { setData } from "./setData";
+// import axios from "axios";
 const WeatherApp = () => {
-  const BASE_URL = "https://www.metaweather.com/api/location";
-  const CROSS_DOMAIN = "https://the-ultimate-api-challenge.herokuapp.com";
-  const REQUEST_URL = `${CROSS_DOMAIN}/${BASE_URL}`;
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [forecast, setForecast] = useState(null);
   const [city, setCity] = useState("");
 
-  const getWoeid = async (location) => {
-    const { data } = await axios(`${REQUEST_URL}/search`, {
-      params: { query: location },
-    });
-
-    if (!data || data.length === 0) {
-      return 0;
-    }
-    //woeid is the id for the city so we can us it to grap the weather data
-    setIsError(false);
-    return data;
-  };
-  const getForecastData = async (woeid) => {
-    const { data } = await axios(`${REQUEST_URL}/${woeid}`);
-    if (!data || data.length === 0) {
-      return 0;
-    }
-    setIsError(false);
-    return data;
-  };
-  const submitRequest = async (location) => {
-    setForecast(null);
-    setIsLoading(true);
-    setIsError(false);
-    // first call
-    const response = await getWoeid(location);
-    if (response !== 0) {
-      const data = await getForecastData(response[0].woeid);
-      if (data === 0) {
-        setIsError("Somthing went wrong");
-        return;
-      }
-      // we got the data
-      console.log("Final data is: ", data);
-      console.log(
-        "date is ",
-        data.consolidated_weather[0].applicable_date.getMonth()
-      );
-      setIsLoading(false);
-      setForecast(data);
-    } else {
-      setIsError("There is no such location");
-      setIsLoading(false);
-      console.log(
-        "no such location please check the map https://www.metaweather.com/map/"
-      );
-    }
-  };
   useEffect(() => {
-    //   get the woeid
+    // console.log(forecast);
   });
 
   return (
@@ -78,7 +28,19 @@ const WeatherApp = () => {
 
           <button
             className="city-search-btn"
-            onClick={() => submitRequest(city)}
+            onClick={() =>
+              setData(
+                city,
+                isError,
+                setIsError,
+                isLoading,
+                setIsLoading,
+                forecast,
+                setForecast,
+                city,
+                setCity
+              )
+            }
             disabled={isLoading || city.length < 3}
           >
             submit
@@ -94,70 +56,143 @@ const WeatherApp = () => {
           <div className="forecast-card">
             <div className="trans-div">
               <div className="date-city-flex">
-                <div className="day">Sunday</div>
-                <div className="month">February</div>
-                <div className="city">Damascus</div>
+                <div className="day">{forecast.currentDayInfo.fullDayName}</div>
+                <div className="month">{forecast.currentDayInfo.monthDay}</div>
+                <div className="city">{forecast.currentDayInfo.city}</div>
               </div>
               <div className="weather-status-flex">
-                <div className="icon">icon</div>
-                <div className="temp">90C</div>
-                <div className="status">Hail</div>
+                <img
+                  alt={forecast.currentDayInfo.dayStatus}
+                  style={{ width: "32px" }}
+                  src={forecast.currentDayInfo.statusIconLink}
+                />
+                <div className="temp">{forecast.currentDayInfo.temp}</div>
+                <div className="status">
+                  {forecast.currentDayInfo.dayStatus}
+                </div>
               </div>
             </div>
             <div className="details-div">
               <div className="words-details">
                 <div className="word ">
                   <div className="expr">predictability</div>
-                  <div className="expr-num">82%</div>
+                  <div className="expr-num">
+                    {forecast.currentDayInfo.predictability}
+                  </div>
                 </div>
                 <div className="word ">
                   <div className="expr">humidity</div>
-                  <div className="expr-num">72%</div>
+                  <div className="expr-num">
+                    {" "}
+                    {forecast.currentDayInfo.humidity}
+                  </div>
                 </div>
                 <div className="word ">
                   <div className="expr">wind</div>
-                  <div className="expr-num">14km/h</div>
+                  <div className="expr-num">
+                    {" "}
+                    {forecast.currentDayInfo.wind}
+                  </div>
                 </div>
                 <div className="word ">
                   <div className="expr">pressure</div>
-                  <div className="expr-num">1212.2 mb</div>
+                  <div className="expr-num">
+                    {" "}
+                    {forecast.currentDayInfo.airPressure}
+                  </div>
                 </div>
                 <div className="word ">
                   <div className="expr">max-temp</div>
-                  <div className="expr-num">-4C</div>
+                  <div className="expr-num">
+                    {" "}
+                    {forecast.currentDayInfo.maxTemp}
+                  </div>
                 </div>
                 <div className="word">
                   <div className="expr"> min-temp</div>
-                  <div className="expr-num">-8C</div>
+                  <div className="expr-num">
+                    {" "}
+                    {forecast.currentDayInfo.minTemp}
+                  </div>
                 </div>
               </div>
 
               {/* clouds flex */}
               <div className="clouds-flex">
                 <div className="cloud">
-                  <div className="icon">icon</div>
-                  <div className="day">Mon</div>
-                  <div className="temp">-7C</div>
+                  <div className="icon">
+                    <img
+                      alt={forecast.restFiveDaysInfo[0].dayStatus}
+                      style={{ width: "32px" }}
+                      src={forecast.restFiveDaysInfo[0].statusIconLink}
+                    />
+                  </div>
+                  <div className="day">
+                    {forecast.restFiveDaysInfo[0].dayShortName}
+                  </div>
+                  <div className="temp">
+                    {forecast.restFiveDaysInfo[0].temp}
+                  </div>
                 </div>
                 <div className="cloud">
-                  <div className="icon">icon</div>
-                  <div className="day">Mon</div>
-                  <div className="temp">-7C</div>
+                  <div className="icon">
+                    <img
+                      alt={forecast.restFiveDaysInfo[1].dayStatus}
+                      style={{ width: "32px" }}
+                      src={forecast.restFiveDaysInfo[1].statusIconLink}
+                    />
+                  </div>
+                  <div className="day">
+                    {forecast.restFiveDaysInfo[1].dayShortName}
+                  </div>
+                  <div className="temp">
+                    {forecast.restFiveDaysInfo[1].temp}
+                  </div>
                 </div>
                 <div className="cloud">
-                  <div className="icon">icon</div>
-                  <div className="day">Mon</div>
-                  <div className="temp">-7C</div>
+                  <div className="icon">
+                    <img
+                      alt={forecast.restFiveDaysInfo[2].dayStatus}
+                      style={{ width: "32px" }}
+                      src={forecast.restFiveDaysInfo[2].statusIconLink}
+                    />
+                  </div>
+                  <div className="day">
+                    {forecast.restFiveDaysInfo[2].dayShortName}
+                  </div>
+                  <div className="temp">
+                    {forecast.restFiveDaysInfo[2].temp}
+                  </div>
                 </div>
                 <div className="cloud">
-                  <div className="icon">icon</div>
-                  <div className="day">Mon</div>
-                  <div className="temp">-7C</div>
+                  <div className="icon">
+                    <img
+                      alt={forecast.restFiveDaysInfo[3].dayStatus}
+                      style={{ width: "32px" }}
+                      src={forecast.restFiveDaysInfo[3].statusIconLink}
+                    />
+                  </div>
+                  <div className="day">
+                    {forecast.restFiveDaysInfo[3].dayShortName}
+                  </div>
+                  <div className="temp">
+                    {forecast.restFiveDaysInfo[3].temp}
+                  </div>
                 </div>
                 <div className="cloud">
-                  <div className="icon">icon</div>
-                  <div className="day">Mon</div>
-                  <div className="temp">-7C</div>
+                  <div className="icon">
+                    <img
+                      alt={forecast.restFiveDaysInfo[4].dayStatus}
+                      style={{ width: "32px" }}
+                      src={forecast.restFiveDaysInfo[4].statusIconLink}
+                    />
+                  </div>
+                  <div className="day">
+                    {forecast.restFiveDaysInfo[4].dayShortName}
+                  </div>
+                  <div className="temp">
+                    {forecast.restFiveDaysInfo[4].temp}
+                  </div>
                 </div>
               </div>
             </div>
