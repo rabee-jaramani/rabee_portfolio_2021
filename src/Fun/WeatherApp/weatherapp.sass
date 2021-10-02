@@ -45,7 +45,7 @@
     position: relative
     width: 35%
     height: 100%
-    background-image: url('./weather.jpg')
+    background-image: url('./weather.webp')
     border-radius: 10px 0 0 10px
     display: flex
     flex-direction: column
@@ -53,7 +53,7 @@
     .date-city-flex,.weather-status-flex
         display: flex
         flex-direction: column
-        margin-left: 15px
+        margin-left: 10px
 .date-city-flex
     .day
         font-size: 1.3rem
@@ -85,5 +85,7 @@
     justify-content: space-around
     padding: 2px 0
 
-.expr
-    // font-style: uppercase
+@media ( max-width: 500px )
+    .forecast-card 
+        width: 98%
+    

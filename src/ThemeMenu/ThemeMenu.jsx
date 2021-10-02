@@ -109,64 +109,130 @@ const ThemeMenu = () => {
 
     gsap.to("#body", { backgroundImage: `url(${season_bg})` });
     gsap.to("#hello", { attr: { src: season_hello } });
-
+    const duration = 0.2;
     if (season_name === "winter") {
-      TL.to("#front", { color: "white" })
-        .to("#my-name", { color: "white" })
-        .to("#steve-cont", { backgroundColor: "rgb(2,41,78,0.5)" })
-        .to("#item0", { backgroundColor: "rgb(110,170,220)" })
-        .to("#item1", { backgroundColor: "rgb(100,160,210)" })
-        .to("#item2", { backgroundColor: "rgb(80,140,190)" })
-        .to("#item3", { backgroundColor: "rgb(60,120,170)" })
-        .to("#item4", { backgroundColor: "rgb(40,100,160)" })
-        .to("#item5", { backgroundColor: "rgb(10,70,128)" })
-        .to("#item6", { backgroundColor: "rgb(3,59,118)" })
-        .to("#item7", { backgroundColor: "rgb(3,39,108)" });
-      gsap.to(".brief", { backgroundColor: "rgb(49,84,122,0.5)" });
-      gsap.to(".inside", { backgroundColor: "rgb(49,84,122,0.5)" });
+      TL.to("#front", { color: "white", duration: duration })
+        .to("#my-name", { color: "white", duration: duration })
+        .to("#steve-cont", {
+          backgroundColor: "rgb(2,41,78,0.5)",
+          duration: duration,
+        })
+        .to("#item0", {
+          backgroundColor: "rgb(110,170,220)",
+          duration: duration,
+        })
+        .to("#item1", {
+          backgroundColor: "rgb(100,160,210)",
+          duration: duration,
+        })
+        .to("#item2", {
+          backgroundColor: "rgb(80,140,190)",
+          duration: duration,
+        })
+        .to("#item3", {
+          backgroundColor: "rgb(60,120,170)",
+          duration: duration,
+        })
+        .to("#item4", {
+          backgroundColor: "rgb(40,100,160)",
+          duration: duration,
+        })
+        .to("#item5", { backgroundColor: "rgb(10,70,128)", duration: duration })
+        .to("#item6", { backgroundColor: "rgb(3,59,118)", duration: duration })
+        .to("#item7", { backgroundColor: "rgb(3,39,108)", duration: duration });
+      gsap.to(".brief", {
+        backgroundColor: "rgb(49,84,122,0.5)",
+        duration: duration,
+      });
+      gsap.to(".inside", {
+        backgroundColor: "rgb(49,84,122,0.5)",
+        duration: duration,
+      });
     }
     if (season_name === "spring") {
-      TL.to("#front", { color: "rgb(199,12,71)" })
-        .to("#my-name", { color: "rgb(210,30,90)" })
-        .to("#steve-cont", { backgroundColor: "rgb(205,7,67,0.5)" })
-        .to("#item0", { backgroundColor: "rgb(205,7,67)" })
-        .to("#item1", { backgroundColor: "rgb(199,12,71)" })
-        .to("#item2", { backgroundColor: "rgb(175,17,75)" })
-        .to("#item3", { backgroundColor: "rgb(160,23,80)" })
-        .to("#item4", { backgroundColor: "rgb(145,28,85)" })
-        .to("#item5", { backgroundColor: "rgb(130,33,90)" })
-        .to("#item6", { backgroundColor: "rgb(115,38,95)" })
-        .to("#item7", { backgroundColor: "rgb(100,42,100)" });
+      TL.to("#front", { color: "rgb(199,12,71)", duration: duration })
+        .to("#my-name", { color: "rgb(210,30,90)", duration: duration })
+        .to("#steve-cont", {
+          backgroundColor: "rgb(205,7,67,0.5)",
+          duration: duration,
+        })
+        .to("#item0", { backgroundColor: "rgb(205,7,67)", duration: duration })
+        .to("#item1", { backgroundColor: "rgb(199,12,71)", duration: duration })
+        .to("#item2", { backgroundColor: "rgb(175,17,75)", duration: duration })
+        .to("#item3", { backgroundColor: "rgb(160,23,80)", duration: duration })
+        .to("#item4", { backgroundColor: "rgb(145,28,85)", duration: duration })
+        .to("#item5", { backgroundColor: "rgb(130,33,90)", duration: duration })
+        .to("#item6", { backgroundColor: "rgb(115,38,95)", duration: duration })
+        .to("#item7", {
+          backgroundColor: "rgb(100,42,100)",
+          duration: duration,
+        });
       gsap.to(".brief", { backgroundColor: "rgb(199,12,71,0.5)" });
       gsap.to(".inside", { backgroundColor: "rgb(199,12,71,0.5)" });
     }
     if (season_name === "summer") {
-      TL.to("#front", { color: "rgb(254,169,124)" })
-        .to("#my-name", { color: "rgb(254,169,124)" })
-        .to("#steve-cont", { backgroundColor: "rgb(237,108,76,0.5)" })
-        .to("#item0", { backgroundColor: "rgb(60,185,165)" })
-        .to("#item1", { backgroundColor: "rgb(3,108,133)" })
-        .to("#item2", { backgroundColor: "rgb(60,185,165)" })
-        .to("#item3", { backgroundColor: "rgb(40,140,170)" })
-        .to("#item4", { backgroundColor: "rgb(42,175,155)" })
-        .to("#item5", { backgroundColor: "rgb(23,120,150)" })
-        .to("#item6", { backgroundColor: "rgb(70,195,175)" })
-        .to("#item7", { backgroundColor: "rgb(23,120,150)" });
+      TL.to("#front", { color: "rgb(254,169,124)", duration: duration })
+        .to("#my-name", { color: "rgb(254,169,124)", duration: duration })
+        .to("#steve-cont", {
+          backgroundColor: "rgb(237,108,76,0.5)",
+          duration: duration,
+        })
+        .to("#item0", {
+          backgroundColor: "rgb(60,185,165)",
+          duration: duration,
+        })
+        .to("#item1", { backgroundColor: "rgb(3,108,133)", duration: duration })
+        .to("#item2", {
+          backgroundColor: "rgb(60,185,165)",
+          duration: duration,
+        })
+        .to("#item3", {
+          backgroundColor: "rgb(40,140,170)",
+          duration: duration,
+        })
+        .to("#item4", {
+          backgroundColor: "rgb(42,175,155)",
+          duration: duration,
+        })
+        .to("#item5", {
+          backgroundColor: "rgb(23,120,150)",
+          duration: duration,
+        })
+        .to("#item6", {
+          backgroundColor: "rgb(70,195,175)",
+          duration: duration,
+        })
+        .to("#item7", {
+          backgroundColor: "rgb(23,120,150)",
+          duration: duration,
+        });
       gsap.to(".brief", { backgroundColor: "rgb(60,185,165,0.5)" });
       gsap.to(".inside", { backgroundColor: "rgb(60,185,165,0.5)" });
     }
     if (season_name === "autumn") {
-      TL.to("#front", { color: "rgb(252,150,59)" })
-        .to("#my-name", { color: "rgb(220,190,90)" })
-        .to("#steve-cont", { backgroundColor: "rgb(252,150,59,0.5)" })
-        .to("#item0", { backgroundColor: "rgb(140,50,40)" })
-        .to("#item1", { backgroundColor: "rgb(146,59,51)" })
-        .to("#item2", { backgroundColor: "rgb(150,70,60)" })
-        .to("#item3", { backgroundColor: "rgb(160,80,70)" })
-        .to("#item4", { backgroundColor: "rgb(170,90,80)" })
-        .to("#item5", { backgroundColor: "rgb(180,100,90)" })
-        .to("#item6", { backgroundColor: "rgb(190,110,100)" })
-        .to("#item7", { backgroundColor: "rgb(200,120,110)" });
+      TL.to("#front", { color: "rgb(252,150,59)", duration: duration })
+        .to("#my-name", { color: "rgb(220,190,90)", duration: duration })
+        .to("#steve-cont", {
+          backgroundColor: "rgb(252,150,59,0.5)",
+          duration: duration,
+        })
+        .to("#item0", { backgroundColor: "rgb(140,50,40)", duration: duration })
+        .to("#item1", { backgroundColor: "rgb(146,59,51)", duration: duration })
+        .to("#item2", { backgroundColor: "rgb(150,70,60)", duration: duration })
+        .to("#item3", { backgroundColor: "rgb(160,80,70)", duration: duration })
+        .to("#item4", { backgroundColor: "rgb(170,90,80)", duration: duration })
+        .to("#item5", {
+          backgroundColor: "rgb(180,100,90)",
+          duration: duration,
+        })
+        .to("#item6", {
+          backgroundColor: "rgb(190,110,100)",
+          duration: duration,
+        })
+        .to("#item7", {
+          backgroundColor: "rgb(200,120,110)",
+          duration: duration,
+        });
       gsap.to(".brief", { backgroundColor: "rgb(167,83,45,0.5)" });
       gsap.to(".inside", { backgroundColor: "rgb(167,83,45,0.5)" });
     }
@@ -178,21 +244,51 @@ const ThemeMenu = () => {
           season_bg: season_bg,
         })
       );
-      TL.to("#front", { color: "rgb(251,251,251)" })
-        .to("#my-name", { color: "rgb(251,251,251)" })
-        .to("#steve-cont", { backgroundColor: "transparent" })
+      TL.to("#front", { color: "rgb(251,251,251)", duration: duration })
+        .to("#my-name", { color: "rgb(251,251,251)", duration: duration })
+        .to("#steve-cont", {
+          backgroundColor: "transparent",
+          duration: duration,
+        })
         // .to('#body',{backgroundImage:`none`})
-        .to("#body", { backgroundColor: `rgb(1,1,1)` })
+        .to("#body", { backgroundColor: `rgb(1,1,1)`, duration: duration })
         .to("#hello", { attr: { src: hello_winter } })
-        .to("#item0", { backgroundColor: "rgb(40, 40, 40)" })
-        .to("#item1", { backgroundColor: "rgb(50, 50, 50)" })
-        .to("#item1", { backgroundColor: "rgb(71, 71, 71)" })
-        .to("#item2", { backgroundColor: "rgb(90, 90, 90)" })
-        .to("#item3", { backgroundColor: "rgb(120, 120, 120)" })
-        .to("#item4", { backgroundColor: "rgb(140, 140, 140)" })
-        .to("#item5", { backgroundColor: "rgb(160, 160, 160)" })
-        .to("#item6", { backgroundColor: "rgb(180, 180, 180)" })
-        .to("#item7", { backgroundColor: "rgb(200, 200, 200)" });
+        .to("#item0", {
+          backgroundColor: "rgb(40, 40, 40)",
+          duration: duration,
+        })
+        .to("#item1", {
+          backgroundColor: "rgb(50, 50, 50)",
+          duration: duration,
+        })
+        .to("#item1", {
+          backgroundColor: "rgb(71, 71, 71)",
+          duration: duration,
+        })
+        .to("#item2", {
+          backgroundColor: "rgb(90, 90, 90)",
+          duration: duration,
+        })
+        .to("#item3", {
+          backgroundColor: "rgb(120, 120, 120)",
+          duration: duration,
+        })
+        .to("#item4", {
+          backgroundColor: "rgb(140, 140, 140)",
+          duration: duration,
+        })
+        .to("#item5", {
+          backgroundColor: "rgb(160, 160, 160)",
+          duration: duration,
+        })
+        .to("#item6", {
+          backgroundColor: "rgb(180, 180, 180)",
+          duration: duration,
+        })
+        .to("#item7", {
+          backgroundColor: "rgb(200, 200, 200)",
+          duration: duration,
+        });
       gsap.to(".brief", { backgroundColor: "rgba(0, 0, 0, 0.603)" });
       gsap.to(".inside", { backgroundColor: "rgba(0, 0, 0, 0.603)" });
     }
