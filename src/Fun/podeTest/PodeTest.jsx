@@ -8,7 +8,9 @@ import dove from "../images/dove.webp";
 import owl from "../images/owl.webp";
 import eagle from "../images/eagle.webp";
 import peacock from "../images/peacock.webp";
+import { useHistory } from "react-router";
 const PodeTest = () => {
+  const history = useHistory();
   const answers = useSelector((state) => state.PodeAnswers);
   const season_name = useSelector((state) => state.Season.season_name);
   const [result, setResult] = useState("");
@@ -69,6 +71,9 @@ const PodeTest = () => {
 
   return (
     <div className="pode_test-cont">
+      <div className="bacck" onClick={() => history.push("/fun")}>
+        <i className="fas fa-arrow-circle-left"></i>
+      </div>
       <h1 className="title">PODE TEST</h1>
       <Result result={result} />
 

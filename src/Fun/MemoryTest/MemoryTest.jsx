@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import Image from "./Image";
 import { fillListImages } from "./images_data";
+import { useHistory } from "react-router";
+
 const MemoryTest = () => {
   const [difficulty, setDifficulty] = useState("easy");
   const [images_array, setImages_array] = useState([]);
@@ -12,6 +14,7 @@ const MemoryTest = () => {
   const [clicks, setClicks] = useState(0);
   const [winCounter, setWinCounter] = useState(0);
   const [finalTime, setFinalTime] = useState();
+  const history = useHistory();
   // /////////////////////////////////////////////
   const handleImageClick = (owner_img_id, owner_img_name) => {
     setClicks(clicks + 1);
@@ -164,6 +167,9 @@ const MemoryTest = () => {
   }, [difficulty, setImages_array]);
   return (
     <div className="memory-test-cont">
+      <div className="bacck" onClick={() => history.push("/fun")}>
+        <i className="fas fa-arrow-circle-left"></i>
+      </div>
       <h1 className="title">Memory test</h1>
       <hr className="title-underline" />
 

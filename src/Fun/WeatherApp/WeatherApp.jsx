@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import { BounceLoader } from "react-spinners";
 import { setData } from "./setData";
 // import axios from "axios";
 const WeatherApp = () => {
+  const history = useHistory();
+
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [forecast, setForecast] = useState(null);
@@ -14,6 +17,9 @@ const WeatherApp = () => {
 
   return (
     <div className="weather-cont">
+      <div className="bacck" onClick={() => history.push("/fun")}>
+        <i className="fas fa-arrow-circle-left"></i>
+      </div>
       <h1 className="title">Weather App</h1>
       <div className="forecast-cont">
         <div className="search-div">
@@ -45,7 +51,22 @@ const WeatherApp = () => {
           >
             submit
           </button>
-          <div className="error-message">{isError}</div>
+          {isError ? (
+            <>
+              <div className="error-message">{isError}</div>
+              <a
+                className="checkmap"
+                target="_blank"
+                href="https://www.metaweather.com/map/"
+                rel="noreferrer"
+              >
+                {" "}
+                Please check the map{" "}
+              </a>
+            </>
+          ) : (
+            ""
+          )}
 
           {isLoading ? <BounceLoader size={50} color={"#2FA8FF"} /> : ""}
           {/* </div> */}

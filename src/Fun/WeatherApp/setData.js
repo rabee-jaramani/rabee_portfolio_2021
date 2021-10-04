@@ -51,7 +51,7 @@ const submitRequest = async (attr) => {
     attr.setIsLoading(false);
     attr.setForecast(readyData);
   } else {
-    attr.setIsError("There is no such location");
+    attr.setIsError("There is no such location in our database.");
     attr.setIsLoading(false);
     console.log(
       "no such location please check the map https://www.metaweather.com/map/"
