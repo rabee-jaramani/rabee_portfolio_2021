@@ -22,7 +22,7 @@ export const projectsList = [
     proj_name: "Teacher Portfolio",
     proj_img: christina,
     proj_tools: ["SASS", "JavaScript", "React-js", "GSAP"],
-    proj_link: "https://christina-av.netlify.app/",
+    proj_link: "https://chri.netlify.app/",
   },
   {
     id: 3,

@@ -9,30 +9,30 @@ const Menu = () => {
           Home
         </div>
       </Link>
-      <Link to="/about">
+      <Link to="/fun">
         <div className="menu-item item1" id="item1">
+          Fun
+        </div>
+      </Link>
+      <Link to="/about">
+        <div className="menu-item item2" id="item2">
           About
         </div>
       </Link>
       <Link to="/projects">
-        <div className="menu-item item2" id="item2">
+        <div className="menu-item item3" id="item3">
           Projects
         </div>
       </Link>
 
       <Link to="/skills">
-        <div className="menu-item item3" id="item3">
+        <div className="menu-item item4" id="item4">
           Skills
         </div>
       </Link>
       <Link to="/cv">
-        <div className="menu-item item4" id="item4">
-          My CV
-        </div>
-      </Link>
-      <Link to="/fun">
         <div className="menu-item item5" id="item5">
-          Fun
+          My CV
         </div>
       </Link>
 
